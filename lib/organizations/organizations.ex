@@ -17,13 +17,13 @@ defmodule Pipedrive.API.Organizations do
   end
 
   @doc """
-  Create an organization. Accepts a map of params of which `name` is required.
+  Create an organization. Accepts a map of params (`body`) of which `name` is required.
 
   [Pipedrive API docs](#{api_docs_base_url()}/Organizations/post_organizations)
   """
   @spec create(%{name: String.t()}) :: Pipedrive.API.response()
-  def create(params) do
-    Pipedrive.API.post("organizations", params)
+  def create(body) do
+    Pipedrive.API.post("organizations", body)
   end
 
   @doc """

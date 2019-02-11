@@ -8,20 +8,20 @@ defmodule Pipedrive.Helpers.Pagination do
   # if it's not, this could be done concurrently, albeit rate limiting
   # will complicate things
   @spec fetch_all((() -> Pipedrive.API.response()), map()) :: Pipedrive.API.response()
-  def fetch_all(api_call, params, opts \\ []) do
+  def fetch_all(api_call, body, opts \\ []) do
     timeout = Keyword.get(opts, :timeout, @default_timeout)
-    task = Task.async(fn -> do_fetch_all(api_call, params) end)
+    task = Task.async(fn -> do_fetch_all(api_call, body) end)
     Task.await(task, timeout)
   end
 
-  defp do_fetch_all(api_call, params, state \\ %{data: []}) do
-    case api_call.(params, params: %{limit: @max_items_per_page}) do
+  defp do_fetch_all(api_call, body, state \\ %{data: []}) do
+    case api_call.(body, params: %{limit: @max_items_per_page}) do
       {:ok, response} ->
         state = merge_response(state, response)
 
         if more_items?(response) do
-          params = Map.merge(params, %{start: next_start(response)})
-          do_fetch_all(api_call, params, state)
+          body = Map.merge(body, %{start: next_start(response)})
+          do_fetch_all(api_call, body, state)
         else
           state
         end
