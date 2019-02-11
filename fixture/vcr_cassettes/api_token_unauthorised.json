@@ -6,24 +6,26 @@
         "Content-Type": "application/json"
       },
       "method": "get",
-      "options": [],
+      "options": {
+        "follow_redirect": "true"
+      },
       "request_body": "",
-      "url": "https://acme.pipedrive.com/v1//organizations?api_token=pipedrive-dummy-api-token"
+      "url": "https://some-company.pipedrive.com/v1/organizations"
     },
     "response": {
       "binary": false,
       "body": "{\"success\":false,\"error\":\"unauthorized access\",\"errorCode\":401}",
       "headers": {
         "Content-Type": "application/json",
-        "x-correlation-id": "bba6947f-ecc0-407e-8d48-6b53e04112a4",
-        "badi": "Routing: eu-central-1=>eu-central-1; Version: 43a6;",
+        "x-correlation-id": "3dc07cbc-2256-413b-8ea4-ae2e12864725",
+        "badi": "Routing: eu-central-1=>eu-central-1; Version: 0a31;",
         "Access-Control-Expose-Headers": "X-RateLimit-Remaining, X-RateLimit-Limit, X-RateLimit-Reset",
         "Server": "no-name-at-all",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
-        "Date": "Fri, 08 Feb 2019 13:45:58 GMT",
+        "Date": "Mon, 11 Feb 2019 12:51:28 GMT",
         "Connection": "close",
-        "Server-Timing": "edge; dur=1",
+        "Server-Timing": "edge; dur=0",
         "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains"
       },
       "status_code": 401,
