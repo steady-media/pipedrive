@@ -1,0 +1,8 @@
+{
+  "skip_files": [
+    "lib/helpers/http_status.ex"
+  ],
+  "terminal_options": {
+    "file_column_width": 120
+  }
+}
