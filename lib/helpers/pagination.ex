@@ -1,27 +1,43 @@
 defmodule Pipedrive.Helpers.Pagination do
   @moduledoc false
 
-  @max_items_per_page 500
+  # This is the max page size allowed by Pipedrive
+  @max_limit 500
   @default_timeout :timer.seconds(20)
 
-  # TODO: investigate if pagination cursor is opaque
-  # if it's not, this could be done concurrently, albeit rate limiting
-  # will complicate things
-  @spec fetch_all((() -> Pipedrive.API.response()), map()) :: Pipedrive.API.response()
-  def fetch_all(api_call, body, opts \\ []) do
+  @doc """
+  Given an API call and its params, this function will
+  recursively repeat the call while modifying the pagination
+  parameter `next_start` until `more_items_in_collection` is falsey,
+  returning the merged responses. Note that other fields, such as
+  `additional_data` and `related_objects` are discarded.
+  """
+  @spec fetch_all((map -> Pipedrive.API.response()), %{}, []) :: Pipedrive.API.response()
+  def fetch_all(api_call, url_params \\ %{}, opts \\ []) do
     timeout = Keyword.get(opts, :timeout, @default_timeout)
-    task = Task.async(fn -> do_fetch_all(api_call, body) end)
-    Task.await(task, timeout)
+
+    task =
+      Task.async(fn ->
+        do_fetch_all(api_call, url_params)
+      end)
+
+    try do
+      {:ok, Task.await(task, timeout)}
+    catch
+      :exit, _ -> {:error, :timeout}
+    end
   end
 
-  defp do_fetch_all(api_call, body, state \\ %{data: []}) do
-    case api_call.(body, params: %{limit: @max_items_per_page}) do
+  defp do_fetch_all(api_call, url_params, state \\ %{"data" => []}) do
+    url_params = Map.put_new(url_params, :limit, @max_limit)
+
+    case apply(api_call, [url_params]) do
       {:ok, response} ->
         state = merge_response(state, response)
 
         if more_items?(response) do
-          body = Map.merge(body, %{start: next_start(response)})
-          do_fetch_all(api_call, body, state)
+          url_params = Map.merge(url_params, %{start: next_start(response)})
+          do_fetch_all(api_call, url_params, state)
         else
           state
         end
@@ -30,9 +46,10 @@ defmodule Pipedrive.Helpers.Pagination do
       # limit, leaving us starved. We therefore wrap `do_fetch_all` in
       # a `Task`.
       {:error, %HTTPoison.Response{status_code: 429, headers: headers}} ->
-        headers
-        |> parse_retry_after()
-        |> :timer.sleep()
+
+        retry_after = parse_retry_after(headers)
+        IO.puts("Rate limit exhausted, retry_after: #{inspect(retry_after)}")
+        :timer.sleep(retry_after)
 
       {:error, %HTTPoison.Error{} = error} ->
         {:error, error}

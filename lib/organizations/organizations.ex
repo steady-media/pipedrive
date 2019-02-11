@@ -12,9 +12,9 @@ defmodule Pipedrive.Organizations do
 
   [Pipedrive API docs](#{api_docs_base_url()}/Organizations/get_organizations)
   """
-  @spec list :: API.response()
-  def list do
-    API.get("/organizations")
+  @spec list(%{}) :: API.response()
+  def list(url_params \\ %{}) do
+    API.get("/organizations", "", url_params: url_params)
   end
 
   @doc """
@@ -23,8 +23,8 @@ defmodule Pipedrive.Organizations do
   [Pipedrive API docs](#{api_docs_base_url()}/Organizations/post_organizations)
   """
   @spec create(%{name: String.t()}) :: API.response()
-  def create(body) do
-    API.post("/organizations", body)
+  def create(body_params) do
+    API.post("/organizations", body_params)
   end
 
   @doc """
@@ -42,9 +42,8 @@ defmodule Pipedrive.Organizations do
 
   [Pipedrive API docs](#{api_docs_base_url()}/Organizations/delete_organizations_id)
   """
-  # TODO: clarify if Pipedrive extracts params from both URL and body, see doc link
   @spec delete(String.t()) :: API.response()
   def delete(id) do
-    API.delete("/organizations", nil, url_params: %{id: id})
+    API.delete("/organizations/#{id}")
   end
 end

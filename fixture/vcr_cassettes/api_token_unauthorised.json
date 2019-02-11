@@ -10,22 +10,22 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://some-company.pipedrive.com/v1/organizations"
+      "url": "https://some-company.pipedrive.com/v1/organizations?api_token=invalid-token"
     },
     "response": {
       "binary": false,
       "body": "{\"success\":false,\"error\":\"unauthorized access\",\"errorCode\":401}",
       "headers": {
         "Content-Type": "application/json",
-        "x-correlation-id": "3dc07cbc-2256-413b-8ea4-ae2e12864725",
-        "badi": "Routing: eu-central-1=>eu-central-1; Version: 0a31;",
+        "x-correlation-id": "d337dc14-90e0-488e-9749-4091fca45697",
+        "badi": "Routing: eu-central-1=>eu-central-1; Version: aea4;",
         "Access-Control-Expose-Headers": "X-RateLimit-Remaining, X-RateLimit-Limit, X-RateLimit-Reset",
         "Server": "no-name-at-all",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
-        "Date": "Mon, 11 Feb 2019 12:51:28 GMT",
+        "Date": "Mon, 11 Feb 2019 18:18:26 GMT",
         "Connection": "close",
-        "Server-Timing": "edge; dur=0",
+        "Server-Timing": "edge; dur=9",
         "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains"
       },
       "status_code": 401,

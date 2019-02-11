@@ -1,7 +1,7 @@
 [
   {
     "request": {
-      "body": "{\"name\":\"My Organization\"}",
+      "body": "{\"name\":\"My Organization (create)\"}",
       "headers": {
         "Content-Type": "application/json"
       },
@@ -10,14 +10,14 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations"
+      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
     },
     "response": {
       "binary": false,
-      "body": "{\"success\":true,\"data\":{\"id\":6,\"company_id\":5146954,\"owner_id\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"<EMAIL_REMOVED>\",\"has_pic\":true,\"pic_hash\":\"8e3fd02680a4b001ae93a55e147c0d50\",\"active_flag\":true,\"value\":8091815},\"name\":\"My Organization\",\"open_deals_count\":0,\"related_open_deals_count\":0,\"closed_deals_count\":0,\"related_closed_deals_count\":0,\"email_messages_count\":0,\"people_count\":0,\"activities_count\":0,\"done_activities_count\":0,\"undone_activities_count\":0,\"reference_activities_count\":0,\"files_count\":0,\"notes_count\":0,\"followers_count\":0,\"won_deals_count\":0,\"related_won_deals_count\":0,\"lost_deals_count\":0,\"related_lost_deals_count\":0,\"active_flag\":true,\"category_id\":null,\"picture_id\":null,\"country_code\":null,\"first_char\":\"m\",\"update_time\":\"2019-02-11 12:51:29\",\"add_time\":\"2019-02-11 12:51:29\",\"visible_to\":\"3\",\"next_activity_date\":null,\"next_activity_time\":null,\"next_activity_id\":null,\"last_activity_id\":null,\"last_activity_date\":null,\"label\":null,\"address\":null,\"address_subpremise\":null,\"address_street_number\":null,\"address_route\":null,\"address_sublocality\":null,\"address_locality\":null,\"address_admin_area_level_1\":null,\"address_admin_area_level_2\":null,\"address_country\":null,\"address_postal_code\":null,\"address_formatted_address\":null,\"cc_email\":\"<EMAIL_REMOVED>\",\"owner_name\":\"Mihai Tarnovan\",\"edit_name\":true},\"related_objects\":{\"user\":{\"8091815\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"<EMAIL_REMOVED>\",\"has_pic\":true,\"pic_hash\":\"8e3fd02680a4b001ae93a55e147c0d50\",\"active_flag\":true}}}}",
+      "body": "{\"success\":true,\"data\":{\"id\":214,\"company_id\":5146954,\"owner_id\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"has_pic\":true,\"pic_hash\":\"8e3fd02680a4b001ae93a55e147c0d50\",\"active_flag\":true,\"value\":8091815},\"name\":\"My Organization (create)\",\"open_deals_count\":0,\"related_open_deals_count\":0,\"closed_deals_count\":0,\"related_closed_deals_count\":0,\"email_messages_count\":0,\"people_count\":0,\"activities_count\":0,\"done_activities_count\":0,\"undone_activities_count\":0,\"reference_activities_count\":0,\"files_count\":0,\"notes_count\":0,\"followers_count\":0,\"won_deals_count\":0,\"related_won_deals_count\":0,\"lost_deals_count\":0,\"related_lost_deals_count\":0,\"active_flag\":true,\"category_id\":null,\"picture_id\":null,\"country_code\":null,\"first_char\":\"m\",\"update_time\":\"2019-02-11 18:18:25\",\"add_time\":\"2019-02-11 18:18:25\",\"visible_to\":\"3\",\"next_activity_date\":null,\"next_activity_time\":null,\"next_activity_id\":null,\"last_activity_id\":null,\"last_activity_date\":null,\"label\":null,\"address\":null,\"address_subpremise\":null,\"address_street_number\":null,\"address_route\":null,\"address_sublocality\":null,\"address_locality\":null,\"address_admin_area_level_1\":null,\"address_admin_area_level_2\":null,\"address_country\":null,\"address_postal_code\":null,\"address_formatted_address\":null,\"cc_email\":\"[EMAIL_REMOVED]\",\"owner_name\":\"Mihai Tarnovan\",\"edit_name\":true},\"related_objects\":{\"user\":{\"8091815\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"has_pic\":true,\"pic_hash\":\"8e3fd02680a4b001ae93a55e147c0d50\",\"active_flag\":true}}}}",
       "headers": {
         "Content-Type": "application/json",
-        "x-correlation-id": "480a1bfa-9b06-42d5-a260-9a02bfb4144e",
+        "x-correlation-id": "770ce0eb-4620-4e09-8b98-5e5c8fb0feda",
         "badi": "Routing: eu-central-1=>eu-central-1; Version: aea4;",
         "Access-Control-Expose-Headers": "X-RateLimit-Remaining, X-RateLimit-Limit, X-RateLimit-Reset",
         "x-frame-options": "SAMEORIGIN",
@@ -29,10 +29,10 @@
         "Server": "no-name-at-all",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
-        "Date": "Mon, 11 Feb 2019 12:51:29 GMT",
+        "Date": "Mon, 11 Feb 2019 18:18:25 GMT",
         "Connection": "close",
-        "Set-Cookie": "pipe-last-active=1549889489171;path=/;domain=.pipedrive.com;expires=0",
-        "Server-Timing": "edge; dur=30",
+        "Set-Cookie": "pipe-last-active=1549909105415;path=/;domain=.pipedrive.com;expires=0",
+        "Server-Timing": "edge; dur=1",
         "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains"
       },
       "status_code": 201,

@@ -1,0 +1,163 @@
+[
+  {
+    "request": {
+      "body": "{\"name\":\"My Organization (1)\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": {
+        "follow_redirect": "true"
+      },
+      "request_body": "",
+      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"success\":true,\"data\":{\"id\":211,\"company_id\":5146954,\"owner_id\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"has_pic\":true,\"pic_hash\":\"8e3fd02680a4b001ae93a55e147c0d50\",\"active_flag\":true,\"value\":8091815},\"name\":\"My Organization (1)\",\"open_deals_count\":0,\"related_open_deals_count\":0,\"closed_deals_count\":0,\"related_closed_deals_count\":0,\"email_messages_count\":0,\"people_count\":0,\"activities_count\":0,\"done_activities_count\":0,\"undone_activities_count\":0,\"reference_activities_count\":0,\"files_count\":0,\"notes_count\":0,\"followers_count\":0,\"won_deals_count\":0,\"related_won_deals_count\":0,\"lost_deals_count\":0,\"related_lost_deals_count\":0,\"active_flag\":true,\"category_id\":null,\"picture_id\":null,\"country_code\":null,\"first_char\":\"m\",\"update_time\":\"2019-02-11 18:18:23\",\"add_time\":\"2019-02-11 18:18:23\",\"visible_to\":\"3\",\"next_activity_date\":null,\"next_activity_time\":null,\"next_activity_id\":null,\"last_activity_id\":null,\"last_activity_date\":null,\"label\":null,\"address\":null,\"address_subpremise\":null,\"address_street_number\":null,\"address_route\":null,\"address_sublocality\":null,\"address_locality\":null,\"address_admin_area_level_1\":null,\"address_admin_area_level_2\":null,\"address_country\":null,\"address_postal_code\":null,\"address_formatted_address\":null,\"cc_email\":\"[EMAIL_REMOVED]\",\"owner_name\":\"Mihai Tarnovan\",\"edit_name\":true},\"related_objects\":{\"user\":{\"8091815\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"has_pic\":true,\"pic_hash\":\"8e3fd02680a4b001ae93a55e147c0d50\",\"active_flag\":true}}}}",
+      "headers": {
+        "Content-Type": "application/json",
+        "x-correlation-id": "c2a28ecb-bf52-43ca-8a3d-71595327fa39",
+        "badi": "Routing: eu-central-1=>eu-central-1; Version: aea4;",
+        "Access-Control-Expose-Headers": "X-RateLimit-Remaining, X-RateLimit-Limit, X-RateLimit-Reset",
+        "x-frame-options": "SAMEORIGIN",
+        "Access-Control-Allow-Origin": "*",
+        "x-content-type-options": "nosniff",
+        "X-RateLimit-Limit": "40",
+        "X-RateLimit-Remaining": "36",
+        "X-RateLimit-Reset": "2",
+        "Server": "no-name-at-all",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Mon, 11 Feb 2019 18:18:23 GMT",
+        "Connection": "close",
+        "Set-Cookie": "pipe-last-active=1549909103798;path=/;domain=.pipedrive.com;expires=0",
+        "Server-Timing": "edge; dur=1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains"
+      },
+      "status_code": 201,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "{\"name\":\"My Organization (2)\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": {
+        "follow_redirect": "true"
+      },
+      "request_body": "",
+      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"success\":true,\"data\":{\"id\":212,\"company_id\":5146954,\"owner_id\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"has_pic\":true,\"pic_hash\":\"8e3fd02680a4b001ae93a55e147c0d50\",\"active_flag\":true,\"value\":8091815},\"name\":\"My Organization (2)\",\"open_deals_count\":0,\"related_open_deals_count\":0,\"closed_deals_count\":0,\"related_closed_deals_count\":0,\"email_messages_count\":0,\"people_count\":0,\"activities_count\":0,\"done_activities_count\":0,\"undone_activities_count\":0,\"reference_activities_count\":0,\"files_count\":0,\"notes_count\":0,\"followers_count\":0,\"won_deals_count\":0,\"related_won_deals_count\":0,\"lost_deals_count\":0,\"related_lost_deals_count\":0,\"active_flag\":true,\"category_id\":null,\"picture_id\":null,\"country_code\":null,\"first_char\":\"m\",\"update_time\":\"2019-02-11 18:18:24\",\"add_time\":\"2019-02-11 18:18:24\",\"visible_to\":\"3\",\"next_activity_date\":null,\"next_activity_time\":null,\"next_activity_id\":null,\"last_activity_id\":null,\"last_activity_date\":null,\"label\":null,\"address\":null,\"address_subpremise\":null,\"address_street_number\":null,\"address_route\":null,\"address_sublocality\":null,\"address_locality\":null,\"address_admin_area_level_1\":null,\"address_admin_area_level_2\":null,\"address_country\":null,\"address_postal_code\":null,\"address_formatted_address\":null,\"cc_email\":\"[EMAIL_REMOVED]\",\"owner_name\":\"Mihai Tarnovan\",\"edit_name\":true},\"related_objects\":{\"user\":{\"8091815\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"has_pic\":true,\"pic_hash\":\"8e3fd02680a4b001ae93a55e147c0d50\",\"active_flag\":true}}}}",
+      "headers": {
+        "Content-Type": "application/json",
+        "x-correlation-id": "d35b06f8-edbf-4ca7-82ff-96dbe65b7c96",
+        "badi": "Routing: eu-central-1=>eu-central-1; Version: aea4;",
+        "Access-Control-Expose-Headers": "X-RateLimit-Remaining, X-RateLimit-Limit, X-RateLimit-Reset",
+        "x-frame-options": "SAMEORIGIN",
+        "Access-Control-Allow-Origin": "*",
+        "x-content-type-options": "nosniff",
+        "X-RateLimit-Limit": "40",
+        "X-RateLimit-Remaining": "35",
+        "X-RateLimit-Reset": "1",
+        "Server": "no-name-at-all",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Mon, 11 Feb 2019 18:18:24 GMT",
+        "Connection": "close",
+        "Set-Cookie": "pipe-last-active=1549909104077;path=/;domain=.pipedrive.com;expires=0",
+        "Server-Timing": "edge; dur=1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains"
+      },
+      "status_code": 201,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "{\"ids\":\"211,212\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "delete",
+      "options": {
+        "follow_redirect": "true"
+      },
+      "request_body": "",
+      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"success\":true,\"data\":{\"id\":[211,212]}}",
+      "headers": {
+        "Content-Type": "application/json",
+        "x-correlation-id": "baaa4cb9-bd31-4119-91f4-d7f6a572463b",
+        "badi": "Routing: eu-central-1=>eu-central-1; Version: aea4;",
+        "Access-Control-Expose-Headers": "X-RateLimit-Remaining, X-RateLimit-Limit, X-RateLimit-Reset",
+        "x-frame-options": "SAMEORIGIN",
+        "Access-Control-Allow-Origin": "*",
+        "x-content-type-options": "nosniff",
+        "X-RateLimit-Limit": "40",
+        "X-RateLimit-Remaining": "34",
+        "X-RateLimit-Reset": "1",
+        "Server": "no-name-at-all",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Mon, 11 Feb 2019 18:18:24 GMT",
+        "Content-Length": "40",
+        "Connection": "keep-alive",
+        "Set-Cookie": "pipe-last-active=1549909104359;path=/;domain=.pipedrive.com;expires=0",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": {
+        "follow_redirect": "true"
+      },
+      "request_body": "",
+      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"success\":true,\"data\":null,\"additional_data\":{\"pagination\":{\"start\":0,\"limit\":100,\"more_items_in_collection\":false}}}",
+      "headers": {
+        "Content-Type": "application/json",
+        "x-correlation-id": "8a02c0a9-0386-4d3f-af43-44bfc0057be9",
+        "badi": "Routing: eu-central-1=>eu-central-1; Version: aea4;",
+        "Access-Control-Expose-Headers": "X-RateLimit-Remaining, X-RateLimit-Limit, X-RateLimit-Reset",
+        "x-frame-options": "SAMEORIGIN",
+        "Access-Control-Allow-Origin": "*",
+        "x-content-type-options": "nosniff",
+        "X-RateLimit-Limit": "40",
+        "X-RateLimit-Remaining": "33",
+        "X-RateLimit-Reset": "1",
+        "Server": "no-name-at-all",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Mon, 11 Feb 2019 18:18:24 GMT",
+        "Content-Length": "118",
+        "Connection": "keep-alive",
+        "Set-Cookie": "pipe-last-active=1549909104480;path=/;domain=.pipedrive.com;expires=0",
+        "Server-Timing": "edge; dur=0",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

@@ -33,4 +33,3 @@ import_config "#{Mix.env()}.exs"
 config :pipedrive,
   company_subdomain: System.get_env("PIPEDRIVE_COMPANY_SUBDOMAIN"),
   api_token: System.get_env("PIPEDRIVE_API_TOKEN")
-

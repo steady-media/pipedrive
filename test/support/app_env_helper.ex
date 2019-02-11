@@ -37,9 +37,9 @@ defmodule Test.Support.AppEnvHelper do
         Enum.map(unquote(map), fn {k, v} ->
           {k, Application.get_env(unquote(app), k)}
         end)
-        |> Map.new()
+      old = Map.new(old)
 
-      Enum.map(unquote(map), fn {k, v} ->
+      Enum.each(unquote(map), fn {k, v} ->
         Application.put_env(unquote(app), k, v)
       end)
 
