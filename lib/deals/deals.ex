@@ -1,9 +1,10 @@
-defmodule Pipedrive.API.Deals do
+defmodule Pipedrive.Deals do
   @moduledoc """
   API endpoint wrappers for working with `Deals`.
   """
 
-  import Pipedrive
+  alias Pipedrive.API
+  import Pipedrive, only: [api_docs_base_url: 0]
 
   @doc """
   Create an deal. Accepts a map of params (`body`), of which `title` is required.
@@ -12,7 +13,7 @@ defmodule Pipedrive.API.Deals do
   """
   @spec create(%{title: String.t()}) :: Pipedrive.API.response()
   def create(body) do
-    Pipedrive.API.post("deals", body)
+    API.post("/deals", body)
   end
 
   @doc """
@@ -22,6 +23,6 @@ defmodule Pipedrive.API.Deals do
   """
   @spec update(%{id: String.t()}) :: Pipedrive.API.response()
   def update(body) do
-    Pipedrive.API.put("deals", body)
+    API.put("/deals", body)
   end
 end

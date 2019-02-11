@@ -34,7 +34,8 @@ defmodule Pipedrive.Helpers.Pagination do
         |> parse_retry_after()
         |> :timer.sleep()
 
-      {:error, %HTTPoison.Error{} = error} -> {:error, error}
+      {:error, %HTTPoison.Error{} = error} ->
+        {:error, error}
     end
   end
 

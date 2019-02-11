@@ -1,19 +1,20 @@
-defmodule Pipedrive.API.Organizations do
+defmodule Pipedrive.Organizations do
   @moduledoc """
   API endpoint wrappers for working with `Organizations`.
   """
 
-  import Pipedrive
+  alias Pipedrive.API
   import Pipedrive.Helpers.Serialization
+  import Pipedrive, only: [api_docs_base_url: 0]
 
   @doc """
   Get all organizations.
 
   [Pipedrive API docs](#{api_docs_base_url()}/Organizations/get_organizations)
   """
-  @spec list :: Pipedrive.API.response()
+  @spec list :: API.response()
   def list do
-    Pipedrive.API.get("organizations")
+    API.get("/organizations")
   end
 
   @doc """
@@ -21,9 +22,9 @@ defmodule Pipedrive.API.Organizations do
 
   [Pipedrive API docs](#{api_docs_base_url()}/Organizations/post_organizations)
   """
-  @spec create(%{name: String.t()}) :: Pipedrive.API.response()
+  @spec create(%{name: String.t()}) :: API.response()
   def create(body) do
-    Pipedrive.API.post("organizations", body)
+    API.post("/organizations", body)
   end
 
   @doc """
@@ -31,9 +32,9 @@ defmodule Pipedrive.API.Organizations do
 
   [Pipedrive API docs](#{api_docs_base_url()}/Organizations/delete_organizations)
   """
-  @spec delete_bulk(nonempty_list(String.t())) :: Pipedrive.API.response()
+  @spec delete_bulk(nonempty_list(String.t())) :: API.response()
   def delete_bulk(ids) do
-    Pipedrive.API.delete("organizations", %{ids: serialize_ids(ids)})
+    API.delete("/organizations", %{ids: serialize_ids(ids)})
   end
 
   @doc """
@@ -42,8 +43,8 @@ defmodule Pipedrive.API.Organizations do
   [Pipedrive API docs](#{api_docs_base_url()}/Organizations/delete_organizations_id)
   """
   # TODO: clarify if Pipedrive extracts params from both URL and body, see doc link
-  @spec delete(String.t()) :: Pipedrive.API.response()
+  @spec delete(String.t()) :: API.response()
   def delete(id) do
-    Pipedrive.API.delete("organizations", nil, url_params: %{id: id})
+    API.delete("/organizations", nil, url_params: %{id: id})
   end
 end

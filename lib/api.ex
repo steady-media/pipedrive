@@ -3,8 +3,8 @@ defmodule Pipedrive.API do
   This module handles interaction with the Pipedrive REST API at HTTP level.
   """
 
-  # Pipedrive URLs look like this: https://my-company.pipedrive.com/v1/
-  @base_url "https://pipedrive.com/v1/"
+  # Pipedrive URLs look like this: https://my-company.pipedrive.com/...
+  @base_url "https://pipedrive.com/v1"
   @default_headers %{"Content-Type" => "application/json"}
 
   @type response ::
@@ -17,7 +17,7 @@ defmodule Pipedrive.API do
   ~w(get head delete post put patch)a
   |> Enum.each(fn method ->
     @spec unquote(method)(String.t(), any, Keyword.t()) :: response
-    def unquote(method)(url, body \\ nil, opts \\ []) do
+    def unquote(method)(url, body_params \\ "", opts \\ []) do
       url_params = Keyword.get(opts, :url_params, %{})
       headers = Keyword.get(opts, :headers, %{})
 
@@ -25,7 +25,7 @@ defmodule Pipedrive.API do
         HTTPoison.request(
           unquote(method),
           base_url() <> url,
-          body,
+          json_encode(body_params),
           headers(headers),
           params: url_params(url_params),
           follow_redirect: true
@@ -58,14 +58,14 @@ defmodule Pipedrive.API do
   end
 
   defp base_url do
-    company = app_env_or_log(:company)
-    base_url_for_company(company)
+    company_subdomain = app_env_or_log(:company_subdomain)
+    base_url_for_company(company_subdomain)
   end
 
-  defp base_url_for_company(company) do
+  defp base_url_for_company(company_subdomain) do
     @base_url
     |> URI.parse()
-    |> Map.update!(:host, &Enum.join([company, &1], "."))
+    |> Map.update!(:host, &Enum.join([company_subdomain, &1], "."))
     |> URI.to_string()
   end
 
@@ -76,16 +76,18 @@ defmodule Pipedrive.API do
       require Logger
 
       Logger.error(
-        "#{__MODULE__} Required key `#{key}` not found in app env, check your configuration."
+        "#{__MODULE__} Required key `#{inspect(key)}` not found in app env, check your configuration."
       )
     end
 
     value
   end
 
+  defp json_encode(""), do: ""
+  defp json_encode(body_params) when is_nil(body_params), do: ""
+  defp json_encode(body_params) when is_map(body_params), do: Jason.encode!(body_params)
+
   defp json_decode(string) when is_bitstring(string) do
-    # Let's be paranoid.
-    # Jason.decode!(string, keys: :atoms)
     Jason.decode!(string)
   end
 end
