@@ -9,7 +9,7 @@ defmodule Pipedrive.Deals do
   @doc """
   Create an deal. Accepts a map of params (`body`), of which `title` is required.
 
-  [Pipedrive API docs](#{api_docs_base_url()}/Deals/post_deals
+  [Pipedrive API docs](#{api_docs_base_url()}/Deals/post_deals)
   """
   @spec create(%{title: String.t()}) :: Pipedrive.API.response()
   def create(body) do
@@ -19,7 +19,7 @@ defmodule Pipedrive.Deals do
   @doc """
   Update a deal. Accepts a map of params (`body`), of which `id` is required.
 
-  [Pipedrive API docs](#{api_docs_base_url()}/Deals/put_deals_id
+  [Pipedrive API docs](#{api_docs_base_url()}/Deals/put_deals_id)
   """
   @spec update(%{id: String.t()}) :: Pipedrive.API.response()
   def update(body) do

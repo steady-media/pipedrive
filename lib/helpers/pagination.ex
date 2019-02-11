@@ -1,5 +1,7 @@
 defmodule Pipedrive.Helpers.Pagination do
-  @moduledoc false
+  @moduledoc """
+  Helpers around pagination.
+  """
 
   # This is the max page size allowed by Pipedrive
   @max_limit 500
