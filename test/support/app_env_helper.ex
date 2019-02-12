@@ -26,8 +26,12 @@ defmodule Test.Support.AppEnvHelper do
     quote location: :keep do
       prev_value = Application.get_env(unquote(app), unquote(key))
       Application.put_env(unquote(app), unquote(key), unquote(value))
-      unquote(expr)
-      Application.put_env(unquote(app), unquote(key), prev_value)
+
+      try do
+        unquote(expr)
+      after
+        Application.put_env(unquote(app), unquote(key), prev_value)
+      end
     end
   end
 
@@ -37,17 +41,20 @@ defmodule Test.Support.AppEnvHelper do
         Enum.map(unquote(map), fn {k, v} ->
           {k, Application.get_env(unquote(app), k)}
         end)
+
       old = Map.new(old)
 
       Enum.each(unquote(map), fn {k, v} ->
         Application.put_env(unquote(app), k, v)
       end)
 
-      unquote(expr)
-
-      Enum.map(old, fn {k, v} ->
-        Application.put_env(unquote(app), k, v)
-      end)
+      try do
+        unquote(expr)
+      after
+        Enum.map(old, fn {k, v} ->
+          Application.put_env(unquote(app), k, v)
+        end)
+      end
     end
   end
 end
