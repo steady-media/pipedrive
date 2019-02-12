@@ -7,8 +7,9 @@ defmodule Pipedrive.API do
   @base_url "https://pipedrive.com/v1"
   @default_headers %{"Content-Type" => "application/json"}
 
+  @type error :: {:error, HTTPoison.Response.t() | HTTPoison.Error.t()}
   @type response ::
-          {:ok, map()} | {:error, HTTPoison.Response.t() | HTTPoison.Error.t()}
+          {:ok, map()} | error
 
   defguardp ok?(code) when is_integer(code) and code in 200..299
   defguardp client_error?(code) when is_integer(code) and code in 400..499
