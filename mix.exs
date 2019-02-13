@@ -45,6 +45,7 @@ defmodule Pipedrive.MixProject do
 
       # dev tools
       {:exvcr, "~> 0.10", only: :test},
+      {:bypass, "~> 1.0", only: :test},
       {:ex_doc, "~> 0.19", only: :dev, runtime: false},
       {:excoveralls, "~> 0.10", only: :test},
       {:credo, "~> 1.0.0", only: [:dev, :test], runtime: false},
