@@ -45,8 +45,8 @@ defmodule Pipedrive.Test.API do
       {:ok, %{"data" => data}} = Organizations.list()
 
       refute Enum.find(data || %{}, fn org ->
-        org["id"] in [id1, id2]
-      end)
+               org["id"] in [id1, id2]
+             end)
     end
   end
 end

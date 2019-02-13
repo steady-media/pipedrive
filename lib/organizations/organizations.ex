@@ -12,9 +12,9 @@ defmodule Pipedrive.Organizations do
 
   [Pipedrive API docs](#{api_docs_base_url()}/Organizations/get_organizations)
   """
-  @spec list(%{}) :: API.response()
-  def list(url_params \\ %{}) do
-    API.get("/organizations", "", url_params: url_params)
+  @spec list(Keyword.t()) :: API.response()
+  def list(opts \\ []) do
+    API.get("/organizations", "", opts)
   end
 
   @doc """
@@ -22,9 +22,19 @@ defmodule Pipedrive.Organizations do
 
   [Pipedrive API docs](#{api_docs_base_url()}/Organizations/post_organizations)
   """
-  @spec create(%{name: String.t()}) :: API.response()
-  def create(%{name: _} = body_params) do
-    API.post("/organizations", body_params)
+  @spec create(%{name: String.t()}, Keyword.t()) :: API.response()
+  def create(%{name: _} = body_params, opts \\ []) do
+    API.post("/organizations", body_params, opts)
+  end
+
+  @doc """
+  Updates an organization. Accepts a map of params (`body`) of which `id` is required.
+
+  [Pipedrive API docs](#{api_docs_base_url()}Organizations/put_organizations_id)
+  """
+  @spec update(%{id: String.t()}, Keyword.t()) :: API.response()
+  def update(%{id: _} = body_params, opts \\ []) do
+    API.put("/organizations", body_params, opts)
   end
 
   @doc """
@@ -32,9 +42,9 @@ defmodule Pipedrive.Organizations do
 
   [Pipedrive API docs](#{api_docs_base_url()}/Organizations/delete_organizations)
   """
-  @spec delete_bulk(nonempty_list(String.t())) :: API.response()
-  def delete_bulk(ids) do
-    API.delete("/organizations", %{ids: serialize_ids(ids)})
+  @spec delete_bulk(nonempty_list(String.t()), Keyword.t()) :: API.response()
+  def delete_bulk(ids, opts \\ []) do
+    API.delete("/organizations", %{ids: serialize_ids(ids)}, opts)
   end
 
   @doc """
@@ -42,8 +52,8 @@ defmodule Pipedrive.Organizations do
 
   [Pipedrive API docs](#{api_docs_base_url()}/Organizations/delete_organizations_id)
   """
-  @spec delete(String.t()) :: API.response()
-  def delete(id) do
-    API.delete("/organizations/#{id}")
+  @spec delete(String.t(), Keyword.t()) :: API.response()
+  def delete(id, opts \\ []) do
+    API.delete("/organizations/#{id}", "", opts)
   end
 end

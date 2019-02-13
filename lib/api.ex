@@ -21,11 +21,12 @@ defmodule Pipedrive.API do
     def unquote(method)(url, body_params \\ "", opts \\ []) do
       url_params = Keyword.get(opts, :url_params, %{})
       headers = Keyword.get(opts, :headers, %{})
+      base_url = Keyword.get(opts, :base_url, false)
 
       response =
         HTTPoison.request(
           unquote(method),
-          base_url() <> url,
+          base_url(base_url) <> url,
           json_encode(body_params),
           headers(headers),
           params: url_params(url_params),
@@ -58,10 +59,12 @@ defmodule Pipedrive.API do
     Map.merge(%{api_token: api_token}, url_params)
   end
 
-  defp base_url do
+  defp base_url(false) do
     company_subdomain = app_env_or_log(:company_subdomain)
     base_url_for_company(company_subdomain)
   end
+
+  defp base_url(base_url), do: base_url
 
   defp base_url_for_company(company_subdomain) do
     @base_url

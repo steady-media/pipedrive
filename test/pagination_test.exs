@@ -11,10 +11,12 @@ defmodule Pipedrive.Test.Pagination do
         {:ok, _} = Organizations.create(%{name: "My Org (pagination)" <> " #{i}"})
       end
 
-      {:ok, %{"data" => data}} = Pagination.fetch_all(&Organizations.list/1, %{limit: 1})
+      {:ok, %{"data" => data}} =
+        Pagination.fetch_all(&Organizations.list/1, url_params: %{limit: 1})
+
       assert length(data) >= 10
 
-      {:ok, %{"data" => data}} = Organizations.list(%{limit: 1})
+      {:ok, %{"data" => data}} = Organizations.list(url_params: %{limit: 1})
       assert length(data) == 1
     end
   end
