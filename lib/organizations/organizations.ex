@@ -23,7 +23,7 @@ defmodule Pipedrive.Organizations do
   [Pipedrive API docs](#{api_docs_base_url()}/Organizations/post_organizations)
   """
   @spec create(%{name: String.t()}) :: API.response()
-  def create(body_params) do
+  def create(%{name: _} = body_params) do
     API.post("/organizations", body_params)
   end
 

@@ -51,7 +51,7 @@ defmodule Test.Support.AppEnvHelper do
       try do
         unquote(expr)
       after
-        Enum.map(old, fn {k, v} ->
+        Enum.each(old, fn {k, v} ->
           Application.put_env(unquote(app), k, v)
         end)
       end

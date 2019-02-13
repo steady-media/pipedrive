@@ -12,8 +12,8 @@ defmodule Pipedrive.Deals do
   [Pipedrive API docs](#{api_docs_base_url()}/Deals/post_deals)
   """
   @spec create(%{title: String.t()}) :: Pipedrive.API.response()
-  def create(body) do
-    API.post("/deals", body)
+  def create(%{title: _title} = body_params) do
+    API.post("/deals", body_params)
   end
 
   @doc """
@@ -22,7 +22,7 @@ defmodule Pipedrive.Deals do
   [Pipedrive API docs](#{api_docs_base_url()}/Deals/put_deals_id)
   """
   @spec update(%{id: String.t()}) :: Pipedrive.API.response()
-  def update(body) do
-    API.put("/deals", body)
+  def update(%{id: _id} = body_params) do
+    API.put("/deals", body_params)
   end
 end
