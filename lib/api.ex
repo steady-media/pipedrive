@@ -30,6 +30,9 @@ defmodule Pipedrive.API do
           json_encode(body_params),
           headers(headers),
           params: url_params(url_params),
+          # Note that Hackney will only follow HTTP/303 redirects
+          # on POST requests, while Pipedrive will return a 301 after a
+          # POST in some edgecases
           follow_redirect: true
         )
 
