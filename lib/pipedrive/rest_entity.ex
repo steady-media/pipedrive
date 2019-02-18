@@ -1,7 +1,7 @@
 defmodule Pipedrive.RESTEntity do
   @moduledoc false
   alias Pipedrive.API
-  
+
   # We declare both arities to avoid warnings during mocking
   @callback list() :: API.response()
   @callback list(Keyword.t()) :: API.response()
