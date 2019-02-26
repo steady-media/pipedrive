@@ -2,16 +2,10 @@ defmodule Pipedrive.Helpers.RateLimit do
   @moduledoc """
   Helpers around rate limiting.
   """
+  @behaviour Pipedrive.Helpers.SleepAndRetryBehaviour
   @default_timeout :timer.seconds(5)
   require Logger
 
-  defmodule SleepAndRetry do
-    @moduledoc false
-    @callback sleep_and_retry((... -> Pipedrive.API.response())) :: Pipedrive.API.response()
-    @callback sleep_and_retry((... -> Pipedrive.API.response()), []) :: Pipedrive.API.response()
-    @callback sleep_and_retry((... -> Pipedrive.API.response()), [], []) :: Pipedrive.API.response()
-  end
-  @behaviour SleepAndRetry
 
   @doc """
   Given an api call and its params, this function will execute it
@@ -23,7 +17,8 @@ defmodule Pipedrive.Helpers.RateLimit do
   calls if we retry), in a `Task` and allow it to timeout. The
   timeout can be passed as opts.
   """
-  @impl SleepAndRetry
+  @impl true
+  @spec sleep_and_retry((... -> API.response())) :: API.response()
   def sleep_and_retry(api_call, api_call_args \\ [], opts \\ []) do
     timeout = Keyword.get(opts, :timeout, @default_timeout)
 
