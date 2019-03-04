@@ -1,0 +1,203 @@
+[
+  {
+    "request": {
+      "body": "{\"name\":\"Daniel Doe\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": {
+        "follow_redirect": "true"
+      },
+      "request_body": "",
+      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/persons?api_token=[API_TOKEN_REMOVED]"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"success\":true,\"data\":{\"id\":10,\"company_id\":5142103,\"owner_id\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"has_pic\":true,\"pic_hash\":\"8e3fd02680a4b001ae93a55e147c0d50\",\"active_flag\":true,\"value\":8091815},\"org_id\":null,\"name\":\"Daniel Doe\",\"first_name\":\"Daniel\",\"last_name\":\"Doe\",\"open_deals_count\":0,\"related_open_deals_count\":0,\"closed_deals_count\":0,\"related_closed_deals_count\":0,\"participant_open_deals_count\":0,\"participant_closed_deals_count\":0,\"email_messages_count\":0,\"activities_count\":0,\"done_activities_count\":0,\"undone_activities_count\":0,\"reference_activities_count\":0,\"files_count\":0,\"notes_count\":0,\"followers_count\":0,\"won_deals_count\":0,\"related_won_deals_count\":0,\"lost_deals_count\":0,\"related_lost_deals_count\":0,\"active_flag\":true,\"phone\":[{\"value\":\"\",\"primary\":true}],\"email\":[{\"value\":\"\",\"primary\":true}],\"first_char\":\"d\",\"update_time\":\"2019-03-04 10:43:08\",\"add_time\":\"2019-03-04 10:43:08\",\"visible_to\":\"3\",\"picture_id\":null,\"next_activity_date\":null,\"next_activity_time\":null,\"next_activity_id\":null,\"last_activity_id\":null,\"last_activity_date\":null,\"last_incoming_mail_time\":null,\"last_outgoing_mail_time\":null,\"label\":null,\"org_name\":null,\"cc_email\":\"[EMAIL_REMOVED]\",\"owner_name\":\"Mihai Tarnovan\"},\"related_objects\":{\"user\":{\"8091815\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"has_pic\":true,\"pic_hash\":\"8e3fd02680a4b001ae93a55e147c0d50\",\"active_flag\":true}}}}",
+      "headers": {
+        "Content-Type": "application/json",
+        "x-correlation-id": "e90677b4-2bcb-427f-a6a6-b7931817c1c1",
+        "badi": "Routing: eu-central-1=>eu-central-1; Version: a5c0;",
+        "Access-Control-Expose-Headers": "X-RateLimit-Remaining, X-RateLimit-Limit, X-RateLimit-Reset",
+        "x-frame-options": "SAMEORIGIN",
+        "Access-Control-Allow-Origin": "*",
+        "x-content-type-options": "nosniff",
+        "X-RateLimit-Limit": "40",
+        "X-RateLimit-Remaining": "39",
+        "X-RateLimit-Reset": "2",
+        "Server": "no-name-at-all",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Mon, 04 Mar 2019 10:43:08 GMT",
+        "Connection": "close",
+        "Set-Cookie": "pipe-last-active=1551696188686;path=/;domain=.pipedrive.com;expires=0",
+        "Server-Timing": "edge; dur=1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains"
+      },
+      "status_code": 201,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "{\"name\":\"Elizabeth Doe\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": {
+        "follow_redirect": "true"
+      },
+      "request_body": "",
+      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/persons?api_token=[API_TOKEN_REMOVED]"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"success\":true,\"data\":{\"id\":11,\"company_id\":5142103,\"owner_id\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"has_pic\":true,\"pic_hash\":\"8e3fd02680a4b001ae93a55e147c0d50\",\"active_flag\":true,\"value\":8091815},\"org_id\":null,\"name\":\"Elizabeth Doe\",\"first_name\":\"Elizabeth\",\"last_name\":\"Doe\",\"open_deals_count\":0,\"related_open_deals_count\":0,\"closed_deals_count\":0,\"related_closed_deals_count\":0,\"participant_open_deals_count\":0,\"participant_closed_deals_count\":0,\"email_messages_count\":0,\"activities_count\":0,\"done_activities_count\":0,\"undone_activities_count\":0,\"reference_activities_count\":0,\"files_count\":0,\"notes_count\":0,\"followers_count\":0,\"won_deals_count\":0,\"related_won_deals_count\":0,\"lost_deals_count\":0,\"related_lost_deals_count\":0,\"active_flag\":true,\"phone\":[{\"value\":\"\",\"primary\":true}],\"email\":[{\"value\":\"\",\"primary\":true}],\"first_char\":\"e\",\"update_time\":\"2019-03-04 10:43:09\",\"add_time\":\"2019-03-04 10:43:09\",\"visible_to\":\"3\",\"picture_id\":null,\"next_activity_date\":null,\"next_activity_time\":null,\"next_activity_id\":null,\"last_activity_id\":null,\"last_activity_date\":null,\"last_incoming_mail_time\":null,\"last_outgoing_mail_time\":null,\"label\":null,\"org_name\":null,\"cc_email\":\"[EMAIL_REMOVED]\",\"owner_name\":\"Mihai Tarnovan\"},\"related_objects\":{\"user\":{\"8091815\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"has_pic\":true,\"pic_hash\":\"8e3fd02680a4b001ae93a55e147c0d50\",\"active_flag\":true}}}}",
+      "headers": {
+        "Content-Type": "application/json",
+        "x-correlation-id": "33d7b854-6802-4849-aae3-58cef39912f3",
+        "badi": "Routing: eu-central-1=>eu-central-1; Version: a5c0;",
+        "Access-Control-Expose-Headers": "X-RateLimit-Remaining, X-RateLimit-Limit, X-RateLimit-Reset",
+        "x-frame-options": "SAMEORIGIN",
+        "Access-Control-Allow-Origin": "*",
+        "x-content-type-options": "nosniff",
+        "X-RateLimit-Limit": "40",
+        "X-RateLimit-Remaining": "38",
+        "X-RateLimit-Reset": "2",
+        "Server": "no-name-at-all",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Mon, 04 Mar 2019 10:43:09 GMT",
+        "Connection": "close",
+        "Set-Cookie": "pipe-last-active=1551696189073;path=/;domain=.pipedrive.com;expires=0",
+        "Server-Timing": "edge; dur=0",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains"
+      },
+      "status_code": 201,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "{\"name\":\"Frank Doe\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": {
+        "follow_redirect": "true"
+      },
+      "request_body": "",
+      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/persons?api_token=[API_TOKEN_REMOVED]"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"success\":true,\"data\":{\"id\":12,\"company_id\":5142103,\"owner_id\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"has_pic\":true,\"pic_hash\":\"8e3fd02680a4b001ae93a55e147c0d50\",\"active_flag\":true,\"value\":8091815},\"org_id\":null,\"name\":\"Frank Doe\",\"first_name\":\"Frank\",\"last_name\":\"Doe\",\"open_deals_count\":0,\"related_open_deals_count\":0,\"closed_deals_count\":0,\"related_closed_deals_count\":0,\"participant_open_deals_count\":0,\"participant_closed_deals_count\":0,\"email_messages_count\":0,\"activities_count\":0,\"done_activities_count\":0,\"undone_activities_count\":0,\"reference_activities_count\":0,\"files_count\":0,\"notes_count\":0,\"followers_count\":0,\"won_deals_count\":0,\"related_won_deals_count\":0,\"lost_deals_count\":0,\"related_lost_deals_count\":0,\"active_flag\":true,\"phone\":[{\"value\":\"\",\"primary\":true}],\"email\":[{\"value\":\"\",\"primary\":true}],\"first_char\":\"f\",\"update_time\":\"2019-03-04 10:43:09\",\"add_time\":\"2019-03-04 10:43:09\",\"visible_to\":\"3\",\"picture_id\":null,\"next_activity_date\":null,\"next_activity_time\":null,\"next_activity_id\":null,\"last_activity_id\":null,\"last_activity_date\":null,\"last_incoming_mail_time\":null,\"last_outgoing_mail_time\":null,\"label\":null,\"org_name\":null,\"cc_email\":\"[EMAIL_REMOVED]\",\"owner_name\":\"Mihai Tarnovan\"},\"related_objects\":{\"user\":{\"8091815\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"has_pic\":true,\"pic_hash\":\"8e3fd02680a4b001ae93a55e147c0d50\",\"active_flag\":true}}}}",
+      "headers": {
+        "Content-Type": "application/json",
+        "x-correlation-id": "b38bfd4e-bb2b-4a11-aed0-e0982dd9433c",
+        "badi": "Routing: eu-central-1=>eu-central-1; Version: a5c0;",
+        "Access-Control-Expose-Headers": "X-RateLimit-Remaining, X-RateLimit-Limit, X-RateLimit-Reset",
+        "x-frame-options": "SAMEORIGIN",
+        "Access-Control-Allow-Origin": "*",
+        "x-content-type-options": "nosniff",
+        "X-RateLimit-Limit": "40",
+        "X-RateLimit-Remaining": "39",
+        "X-RateLimit-Reset": "2",
+        "Server": "no-name-at-all",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Mon, 04 Mar 2019 10:43:09 GMT",
+        "Connection": "close",
+        "Set-Cookie": "pipe-last-active=1551696189619;path=/;domain=.pipedrive.com;expires=0",
+        "Server-Timing": "edge; dur=0",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains"
+      },
+      "status_code": 201,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "{\"ids\":\"10,12\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "delete",
+      "options": {
+        "follow_redirect": "true"
+      },
+      "request_body": "",
+      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/persons?api_token=[API_TOKEN_REMOVED]"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"success\":true,\"data\":{\"id\":[10,12]}}",
+      "headers": {
+        "Content-Type": "application/json",
+        "x-correlation-id": "b357dc6a-4ec6-4957-8797-4363a198560b",
+        "badi": "Routing: eu-central-1=>eu-central-1; Version: a5c0;",
+        "Access-Control-Expose-Headers": "X-RateLimit-Remaining, X-RateLimit-Limit, X-RateLimit-Reset",
+        "x-frame-options": "SAMEORIGIN",
+        "Access-Control-Allow-Origin": "*",
+        "x-content-type-options": "nosniff",
+        "X-RateLimit-Limit": "40",
+        "X-RateLimit-Remaining": "37",
+        "X-RateLimit-Reset": "1",
+        "Server": "no-name-at-all",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Mon, 04 Mar 2019 10:43:10 GMT",
+        "Content-Length": "38",
+        "Connection": "keep-alive",
+        "Set-Cookie": "pipe-last-active=1551696189894;path=/;domain=.pipedrive.com;expires=0",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": {
+        "follow_redirect": "true"
+      },
+      "request_body": "",
+      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/persons?api_token=[API_TOKEN_REMOVED]"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"success\":true,\"data\":[{\"id\":11,\"company_id\":5142103,\"owner_id\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"has_pic\":true,\"pic_hash\":\"8e3fd02680a4b001ae93a55e147c0d50\",\"active_flag\":true,\"value\":8091815},\"org_id\":null,\"name\":\"Elizabeth Doe\",\"first_name\":\"Elizabeth\",\"last_name\":\"Doe\",\"open_deals_count\":0,\"related_open_deals_count\":0,\"closed_deals_count\":0,\"related_closed_deals_count\":0,\"participant_open_deals_count\":0,\"participant_closed_deals_count\":0,\"email_messages_count\":0,\"activities_count\":0,\"done_activities_count\":0,\"undone_activities_count\":0,\"reference_activities_count\":0,\"files_count\":0,\"notes_count\":0,\"followers_count\":1,\"won_deals_count\":0,\"related_won_deals_count\":0,\"lost_deals_count\":0,\"related_lost_deals_count\":0,\"active_flag\":true,\"phone\":[{\"value\":\"\",\"primary\":true}],\"email\":[{\"value\":\"\",\"primary\":true}],\"first_char\":\"e\",\"update_time\":\"2019-03-04 10:43:09\",\"add_time\":\"2019-03-04 10:43:09\",\"visible_to\":\"3\",\"picture_id\":null,\"next_activity_date\":null,\"next_activity_time\":null,\"next_activity_id\":null,\"last_activity_id\":null,\"last_activity_date\":null,\"last_incoming_mail_time\":null,\"last_outgoing_mail_time\":null,\"label\":null,\"org_name\":null,\"owner_name\":\"Mihai Tarnovan\",\"cc_email\":\"[EMAIL_REMOVED]\"}],\"additional_data\":{\"pagination\":{\"start\":0,\"limit\":100,\"more_items_in_collection\":false}},\"related_objects\":{\"user\":{\"8091815\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"has_pic\":true,\"pic_hash\":\"8e3fd02680a4b001ae93a55e147c0d50\",\"active_flag\":true}}}}",
+      "headers": {
+        "Content-Type": "application/json",
+        "x-correlation-id": "64ff837d-3d7a-490f-8770-3c8af3f6acb2",
+        "badi": "Routing: eu-central-1=>eu-central-1; Version: a5c0;",
+        "Access-Control-Expose-Headers": "X-RateLimit-Remaining, X-RateLimit-Limit, X-RateLimit-Reset",
+        "x-frame-options": "SAMEORIGIN",
+        "Access-Control-Allow-Origin": "*",
+        "x-content-type-options": "nosniff",
+        "X-RateLimit-Limit": "40",
+        "X-RateLimit-Remaining": "39",
+        "X-RateLimit-Reset": "2",
+        "Server": "no-name-at-all",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Mon, 04 Mar 2019 10:43:10 GMT",
+        "Content-Length": "1564",
+        "Connection": "keep-alive",
+        "Set-Cookie": "pipe-last-active=1551696190049;path=/;domain=.pipedrive.com;expires=0",
+        "Server-Timing": "edge; dur=1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
