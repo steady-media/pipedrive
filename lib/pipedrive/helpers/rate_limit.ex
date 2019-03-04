@@ -5,6 +5,7 @@ defmodule Pipedrive.Helpers.RateLimit do
   @behaviour Pipedrive.Helpers.SleepAndRetryBehaviour
   @default_timeout :timer.seconds(5)
   require Logger
+  alias Pipedrive.API
 
   alias Pipedrive.API
 
