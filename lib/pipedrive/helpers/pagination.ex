@@ -26,7 +26,7 @@ defmodule Pipedrive.Helpers.Pagination do
     timeout = Keyword.get(opts, :timeout, @default_timeout)
     opts = put_new_url_param(opts, :limit, @max_limit)
 
-    case RateLimit.sleep_and_retry(api_call, opts, timeout: timeout) do
+    case RateLimit.sleep_and_retry(api_call, [opts], timeout: timeout) do
       {:ok, response} ->
         state = merge_response(state, response)
 
