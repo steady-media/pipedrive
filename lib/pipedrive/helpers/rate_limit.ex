@@ -7,8 +7,6 @@ defmodule Pipedrive.Helpers.RateLimit do
   require Logger
   alias Pipedrive.API
 
-  alias Pipedrive.API
-
   @doc """
   Given an api call and its params, this function will execute it
   and if the rate limit is reached, extract `retry_after` from
