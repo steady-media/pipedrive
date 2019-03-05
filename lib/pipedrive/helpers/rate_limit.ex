@@ -6,6 +6,7 @@ defmodule Pipedrive.Helpers.RateLimit do
   @default_timeout :timer.seconds(5)
   require Logger
 
+  alias Pipedrive.API
 
   @doc """
   Given an api call and its params, this function will execute it
