@@ -18,7 +18,7 @@ defmodule Pipedrive.Test.RateLimit do
 
     capture_log(fn ->
       assert {:error, :timeout} =
-               RateLimit.sleep_and_retry(&Organizations.list/1, [base_url: bypass_url],
+               RateLimit.sleep_and_retry(&Organizations.list/1, [[base_url: bypass_url]],
                  timeout: :timer.seconds(1)
                )
     end) =~ "Rate limit exceeded"

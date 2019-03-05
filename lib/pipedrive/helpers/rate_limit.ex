@@ -37,7 +37,7 @@ defmodule Pipedrive.Helpers.RateLimit do
   end
 
   defp execute_request(api_call, api_call_args) do
-    case apply(api_call, [api_call_args]) do
+    case apply(api_call, api_call_args) do
       {:ok, response} ->
         {:ok, response}
 
