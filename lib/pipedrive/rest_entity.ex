@@ -9,8 +9,8 @@ defmodule Pipedrive.RESTEntity do
   @callback create(map()) :: API.response()
   @callback create(map(), Keyword.t()) :: API.response()
 
-  @callback update(map()) :: API.response()
-  @callback update(map(), Keyword.t()) :: API.response()
+  @callback update(String.t(), map()) :: API.response()
+  @callback update(String.t(), map(), Keyword.t()) :: API.response()
 
   @callback delete(String.t()) :: API.response()
   @callback delete(String.t(), Keyword.t()) :: API.response()

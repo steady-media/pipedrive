@@ -32,7 +32,7 @@ defmodule Pipedrive.Test.Persons do
       old_email = "gary@example.com"
       new_email = "g.doe1985@example.com"
       {:ok, %{"data" => %{"id" => id}}} = Persons.create(%{name: "Gary Doe", email: old_email})
-      {:ok, %{"data" => %{"id" => ^id}}} = Persons.update(%{id: id, email: new_email})
+      {:ok, %{"data" => %{"id" => ^id}}} = Persons.update(id, %{email: new_email})
 
       {:ok, %{"data" => data}} = Persons.list()
       assert Enum.find(data, &(get_email.(&1) == new_email))

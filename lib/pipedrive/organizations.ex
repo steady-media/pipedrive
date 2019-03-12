@@ -26,7 +26,7 @@ defmodule Pipedrive.Organizations do
   """
   @impl Pipedrive.RESTEntity
   @spec create(map(), Keyword.t()) :: API.response()
-  def create(%{name: _} = body_params, opts \\ []) do
+  def create(body_params, opts \\ []) do
     API.post("/organizations", body_params, opts)
   end
 
@@ -37,8 +37,7 @@ defmodule Pipedrive.Organizations do
   """
   @impl Pipedrive.RESTEntity
   @spec update(map(), Keyword.t()) :: API.response()
-  def update(%{id: _id} = body_params, opts \\ []) do
-    {id, body_params} = Map.pop(body_params, :id)
+  def update(id, body_params, opts \\ []) do
     API.put("/organizations/#{id}", body_params, opts)
   end
 
