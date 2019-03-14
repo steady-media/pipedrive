@@ -20,25 +20,28 @@ defmodule Pipedrive.Deals do
   end
 
   @doc """
-  Create an deal. Accepts a map of params (`body`), of which `title` is required.
+  Create a deal. Accepts a map of params (`body`), of which `title` is required.
 
   [Pipedrive API docs](#{api_docs_base_url()}/Deals/post_deals)
   """
   @impl Pipedrive.RESTEntity
   @spec create(map(), Keyword.t()) :: API.response()
-  def create(%{title: _} = body_params, opts \\ []) do
+  def create(body_params, opts \\ [])
+  def create(%{title: _} = body_params, opts), do: do_create(body_params, opts)
+  def create(%{"title" => _} = body_params, opts), do: do_create(body_params, opts)
+
+  defp do_create(body_params, opts) do
     API.post("/deals", body_params, opts)
   end
 
   @doc """
-  Update a deal. Accepts a map of params (`body`), of which `id` is required.
+  Update a deal. Accepts an id and a map of params (`body`) to be updated.
 
   [Pipedrive API docs](#{api_docs_base_url()}/Deals/put_deals_id)
   """
   @impl Pipedrive.RESTEntity
   @spec update(map(), Keyword.t()) :: API.response()
-  def update(%{id: _id} = body_params, opts \\ []) do
-    {id, body_params} = Map.pop(body_params, :id)
+  def update(id, body_params, opts \\ []) do
     API.put("/deals/#{id}", body_params, opts)
   end
 
