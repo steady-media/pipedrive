@@ -35,7 +35,7 @@ defmodule Pipedrive.Organizations do
   end
 
   @doc """
-  Updates an organization. Accepts a map of params (`body`).
+  Updates an organization. Accepts an id and a map of params (`body`) to be updated.
 
   [Pipedrive API docs](#{api_docs_base_url()}Organizations/put_organizations_id)
   """

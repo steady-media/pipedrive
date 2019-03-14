@@ -20,7 +20,7 @@ defmodule Pipedrive.Deals do
   end
 
   @doc """
-  Create an deal. Accepts a map of params (`body`), of which `title` is required.
+  Create a deal. Accepts a map of params (`body`), of which `title` is required.
 
   [Pipedrive API docs](#{api_docs_base_url()}/Deals/post_deals)
   """
@@ -35,7 +35,7 @@ defmodule Pipedrive.Deals do
   end
 
   @doc """
-  Update a deal. Accepts a map of params (`body`).
+  Update a deal. Accepts an id and a map of params (`body`) to be updated.
 
   [Pipedrive API docs](#{api_docs_base_url()}/Deals/put_deals_id)
   """

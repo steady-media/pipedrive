@@ -20,7 +20,7 @@ defmodule Pipedrive.Persons do
   end
 
   @doc """
-  Create an deal. Accepts a map of params (`body`), of which `name` is required.
+  Create a person. Accepts a map of params (`body`), of which `name` is required.
 
   [Pipedrive API docs](#{api_docs_base_url()}/Persons/post_persons)
   """
@@ -35,7 +35,7 @@ defmodule Pipedrive.Persons do
   end
 
   @doc """
-  Update a person. Accepts a map of params (`body`).
+  Update a person. Accepts an id and a map of params to be updated.
 
   [Pipedrive API docs](#{api_docs_base_url()}/Persons/put_person_id)
   """
