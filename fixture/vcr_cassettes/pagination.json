@@ -10,7 +10,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1"
     },
     "response": {
       "binary": false,
@@ -51,7 +51,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
     },
     "response": {
       "binary": false,
@@ -91,7 +91,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
     },
     "response": {
       "binary": false,
@@ -131,7 +131,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
     },
     "response": {
       "binary": false,
@@ -171,7 +171,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
     },
     "response": {
       "binary": false,
@@ -211,7 +211,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
     },
     "response": {
       "binary": false,
@@ -251,7 +251,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
     },
     "response": {
       "binary": false,
@@ -291,7 +291,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
     },
     "response": {
       "binary": false,
@@ -331,7 +331,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
     },
     "response": {
       "binary": false,
@@ -371,7 +371,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
     },
     "response": {
       "binary": false,
@@ -411,7 +411,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]"
     },
     "response": {
       "binary": false,
@@ -451,7 +451,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=1"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=1"
     },
     "response": {
       "binary": false,
@@ -492,7 +492,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=2"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=2"
     },
     "response": {
       "binary": false,
@@ -533,7 +533,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=3"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=3"
     },
     "response": {
       "binary": false,
@@ -574,7 +574,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=4"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=4"
     },
     "response": {
       "binary": false,
@@ -615,7 +615,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=5"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=5"
     },
     "response": {
       "binary": false,
@@ -656,7 +656,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=6"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=6"
     },
     "response": {
       "binary": false,
@@ -697,7 +697,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=7"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=7"
     },
     "response": {
       "binary": false,
@@ -738,7 +738,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=8"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=8"
     },
     "response": {
       "binary": false,
@@ -779,7 +779,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=9"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=9"
     },
     "response": {
       "binary": false,
@@ -820,7 +820,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=10"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=10"
     },
     "response": {
       "binary": false,
@@ -861,7 +861,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=11"
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations?api_token=[API_TOKEN_REMOVED]&limit=1&start=11"
     },
     "response": {
       "binary": false,
