@@ -13,4 +13,8 @@ jobs:
 
       - run: mix local.hex --force && mix local.rebar --force
       - run: mix deps.get
+      - run: mix compile --force --warnings-as-errors
+      - run: mix credo
+      - run: mix dialyzer
+      - run: mix coveralls
       - run: mix test
