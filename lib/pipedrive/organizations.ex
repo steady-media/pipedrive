@@ -40,7 +40,7 @@ defmodule Pipedrive.Organizations do
   [Pipedrive API docs](#{api_docs_base_url()}Organizations/put_organizations_id)
   """
   @impl Pipedrive.RESTEntity
-  @spec update(map(), Keyword.t()) :: API.response()
+  @spec update(String.t(), map(), Keyword.t()) :: API.response()
   def update(id, body_params, opts \\ []) do
     API.put("/organizations/#{id}", body_params, opts)
   end
