@@ -10,7 +10,7 @@
         "follow_redirect": "true"
       },
       "request_body": "",
-      "url": "https://mihaisteadyhq-sandbox-bdca38.pipedrive.com/v1/persons?api_token=[API_TOKEN_REMOVED]"
+      "url": "https://company-subdomain.pipedrive.com/v1/persons?api_token=[API_TOKEN_REMOVED]"
     },
     "response": {
       "binary": false,
