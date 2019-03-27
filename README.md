@@ -1,6 +1,6 @@
 # Pipedrive
 
-[![CircleCI](https://circleci.com/gh/steady-media/pipedrive.svg?style=svg)](https://circleci.com/gh/steady-media/pipedrive)
+[![CircleCI](https://circleci.com/gh/steady-media/pipedrive/tree/master.svg?style=svg)](https://circleci.com/gh/steady-media/pipedrive/tree/master)
 
 An Elixir API client for [Pipedrive](https://developers.pipedrive.com) REST API.
 
