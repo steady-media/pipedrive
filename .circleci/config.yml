@@ -4,17 +4,7 @@ version: 2.1
 commands:
   # all caches include a version in their name (e.g. foo-cache-v1), the version is an arbitrary number
   # that can be incremented to invalidate a cache in case of errors or other unforeseen circumstances
-  save_plt_cache:
-    steps:
-      - run:
-          name: Version files for caches
-          command: elixir --version >> ELIXIR_VERSION
-      - save_cache:
-          name: Save PLT cache
-          key: plt-cache-v1-{{ checksum "ELIXIR_VERSION" }}
-          paths:
-            - /home/circleci/repo/priv/plts
-  restore_plt_cache:
+  run_dializer_with_cache:
     steps:
       - run:
           name: Version files for caches
@@ -22,6 +12,12 @@ commands:
       - restore_cache:
           name: Restore PLT cache
           key: plt-cache-v1-{{ checksum "ELIXIR_VERSION" }}
+      - run: time mix dialyzer --halt-exit-status
+      - save_cache:
+          name: Save PLT cache
+          key: plt-cache-v1-{{ checksum "ELIXIR_VERSION" }}
+          paths:
+            - /home/circleci/repo/priv/plts
 
 jobs:
   build:
@@ -39,8 +35,6 @@ jobs:
       - run: mix deps.get
       - run: mix compile --force --warnings-as-errors
       - run: mix credo
-      - restore_plt_cache
-      - run: time mix dialyzer --halt-exit-status
-      - save_plt_cache
+      - run_dializer_with_cache
       - run: mix coveralls
       - run: mix test
