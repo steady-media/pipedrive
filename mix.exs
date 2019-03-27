@@ -22,7 +22,10 @@ defmodule Pipedrive.MixProject do
         "coveralls.html": :test
       ],
       test_coverage: [tool: ExCoveralls],
-      dialyzer: [plt_add_deps: true]
+      dialyzer: [
+        plt_add_deps: true,
+        plt_file: {:no_warn, "priv/plts/dialyzer.plt"}
+      ]
     ]
   end
 
