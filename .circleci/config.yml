@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 
 # commands (one or more steps) reused in many jobs
 commands:
