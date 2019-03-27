@@ -40,7 +40,7 @@ jobs:
       - run: mix compile --force --warnings-as-errors
       - run: mix credo
       - restore_plt_cache
-      - run: mix dialyzer --halt-exit-status
+      - run: time mix dialyzer --halt-exit-status
       - save_plt_cache
       - run: mix coveralls
       - run: mix test
