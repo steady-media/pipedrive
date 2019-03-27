@@ -8,7 +8,7 @@ commands:
     steps:
       - run:
           name: Version files for caches
-          command: elixir --version >> ELIXIR_VERSION
+          command: elixir --version > ELIXIR_VERSION
       - restore_cache:
           name: Restore PLT cache
           key: plt-cache-v1-{{ checksum "ELIXIR_VERSION" }}
