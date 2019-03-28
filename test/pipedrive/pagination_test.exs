@@ -12,7 +12,7 @@ defmodule Pipedrive.Test.Pagination do
       end
 
       {:ok, %{"data" => data}} =
-        Pagination.fetch_all(&Organizations.list/1, url_params: %{limit: 1})
+        Pagination.fetch_all(&Organizations.list/1, [[url_params: %{limit: 1}]])
 
       assert length(data) >= 10
 
