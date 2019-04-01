@@ -17,22 +17,22 @@ defmodule Pipedrive.Helpers.Pagination do
   returning the merged responses. Note that other fields, such as
   `additional_data` and `related_objects` are discarded.
   """
-  @spec fetch_all((... -> API.response()), Keyword.t()) :: {:ok, any} | {:error, term()}
-  def fetch_all(api_call, opts \\ []) do
-    do_fetch_all(api_call, opts)
+  @spec fetch_all((... -> API.response()), list(Keyword.t())) :: {:ok, any} | {:error, term()}
+  def fetch_all(api_call, api_call_args \\ [[]]) do
+    do_fetch_all(api_call, api_call_args)
   end
 
-  defp do_fetch_all(api_call, opts, state \\ %{"data" => []}) do
-    timeout = Keyword.get(opts, :timeout, @default_timeout)
-    opts = put_new_url_param(opts, :limit, @max_limit)
+  defp do_fetch_all(api_call, api_call_args, state \\ %{"data" => []}) do
+    timeout = Keyword.get(get_opts(api_call_args), :timeout, @default_timeout)
+    api_call_args = put_new_url_param(api_call_args, :limit, @max_limit)
 
-    case RateLimit.sleep_and_retry(api_call, [opts], timeout: timeout) do
+    case RateLimit.sleep_and_retry(api_call, api_call_args, timeout: timeout) do
       {:ok, response} ->
         state = merge_response(state, response)
 
         if more_items?(response) do
-          opts = put_url_param(opts, :start, next_start(response))
-          do_fetch_all(api_call, opts, state)
+          api_call_args = put_url_param(api_call_args, :start, next_start(response))
+          do_fetch_all(api_call, api_call_args, state)
         else
           {:ok, state}
         end
@@ -45,16 +45,28 @@ defmodule Pipedrive.Helpers.Pagination do
     end
   end
 
-  defp put_new_url_param(opts, param, value) do
-    if get_in(opts, [:url_params, param]) do
-      opts
+  defp put_new_url_param(api_call_args, param, value) do
+    if get_in(get_opts(api_call_args), [:url_params, param]) do
+      api_call_args
     else
-      put_url_param(opts, [:url_params, param], value)
+      put_url_param(api_call_args, param, value)
     end
   end
 
-  def put_url_param(opts, param, value) do
-    put_in(opts, [:url_params, param], value)
+  defp put_url_param(api_call_args, param, value) do
+    if get_in(get_opts(api_call_args), [:url_params]) do
+      update_opts(api_call_args, &put_in(&1, [:url_params, param], value))
+    else
+      update_opts(api_call_args, &put_in(&1, [:url_params], %{param => value}))
+    end
+  end
+
+  defp get_opts(api_call_args) do
+    List.last(api_call_args)
+  end
+
+  defp update_opts(api_call_args, func) do
+    List.update_at(api_call_args, Enum.count(api_call_args) - 1, func)
   end
 
   defp more_items?(response) do
