@@ -17,8 +17,8 @@ defmodule Pipedrive.Helpers.Pagination do
   returning the merged responses. Note that other fields, such as
   `additional_data` and `related_objects` are discarded.
   """
-  @spec fetch_all((... -> API.response()), Keyword.t()) :: {:ok, any} | {:error, term()}
-  def fetch_all(api_call, api_call_args \\ []) do
+  @spec fetch_all((... -> API.response()), list(Keyword.t())) :: {:ok, any} | {:error, term()}
+  def fetch_all(api_call, api_call_args \\ [[]]) do
     do_fetch_all(api_call, api_call_args)
   end
 
@@ -49,12 +49,16 @@ defmodule Pipedrive.Helpers.Pagination do
     if get_in(get_opts(api_call_args), [:url_params, param]) do
       api_call_args
     else
-      put_url_param(api_call_args, [:url_params, param], value)
+      put_url_param(api_call_args, param, value)
     end
   end
 
   defp put_url_param(api_call_args, param, value) do
-    update_opts(api_call_args, &put_in(&1, [:url_params, param], value))
+    if get_in(get_opts(api_call_args), [:url_params]) do
+      update_opts(api_call_args, &put_in(&1, [:url_params, param], value))
+    else
+      update_opts(api_call_args, &put_in(&1, [:url_params], %{param => value}))
+    end
   end
 
   defp get_opts(api_call_args) do
