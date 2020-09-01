@@ -1,0 +1,48 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": {
+        "follow_redirect": "true"
+      },
+      "request_body": "",
+      "url": "https://company-subdomain.pipedrive.com/v1/persons/search?api_token=[API_TOKEN_REMOVED]&exact_match=true&fields=custom_fields&term=911f0b5a-155c-4e17-a424-ceac3abd1b02"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"success\":true,\"data\":{\"items\":[{\"result_score\":0.1997,\"item\":{\"id\":23,\"type\":\"person\",\"name\":\"Alice Aubree\",\"phones\":[],\"emails\":[\"alice@example.com\"],\"visible_to\":3,\"owner\":{\"id\":8091815},\"organization\":null,\"custom_fields\":[\"Steady Automatic Export (dev Mihai)\",\"911f0b5a-155c-4e17-a424-ceac3abd1b02\"],\"notes\":[]}}]},\"additional_data\":{\"pagination\":{\"start\":0,\"limit\":100,\"more_items_in_collection\":false}}}",
+      "headers": {
+        "Date": "Tue, 01 Sep 2020 10:46:57 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "411",
+        "Connection": "keep-alive",
+        "Set-Cookie": "__cfduid=d442e9a1972726c0a40a4e21c1d69a8c61598957217; expires=Thu, 01-Oct-20 10:46:57 GMT; path=/; domain=.pipedrive.com; HttpOnly; SameSite=Lax",
+        "CF-Ray": "5cbe690fabcfad30-OTP",
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Cache-Control": "no-cache",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "CF-Cache-Status": "DYNAMIC",
+        "Access-Control-Expose-Headers": "X-RateLimit-Remaining, X-RateLimit-Limit, X-RateLimit-Reset",
+        "badi": "Routing: eu-central-1=>eu-central-1; Version: c88a; Host: bari;",
+        "cf-request-id": "04eadffdc60000ad30469ee200000001",
+        "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+        "pdtrusted-wgw-real-user-ip": "5.15.246.253",
+        "X-Content-Type-Options": "nosniff",
+        "x-correlation-id": "600985f7-06c1-4dea-b962-a5261684645b",
+        "X-RateLimit-Limit": "20",
+        "X-RateLimit-Remaining": "19",
+        "X-RateLimit-Reset": "2",
+        "X-XSS-Protection": "1; mode=block",
+        "Server": "cloudflare",
+        "alt-svc": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
