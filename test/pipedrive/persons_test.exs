@@ -74,6 +74,7 @@ defmodule Pipedrive.Test.Persons do
             fields: :custom_fields
           }
         )
+
       assert match?(%{"items" => [%{"item" => %{"id" => 23, "name" => "Alice Aubree"}}]}, data)
     end
   end
