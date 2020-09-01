@@ -69,19 +69,19 @@ defmodule Pipedrive.Test.Persons do
       {:ok, %{"data" => data}} =
         Persons.search(
           url_params: %{
-            term: "911f0b5a-155c-4e17-a424-ceac3abd1b02",
+            term: "96e0749b-b370-46b2-9d26-37ca19a26bd9",
             exact_match: true,
             fields: :custom_fields
           }
         )
 
-      assert match?(%{"items" => [%{"item" => %{"id" => 23, "name" => "Alice Aubree"}}]}, data)
+      assert match?(%{"items" => [%{"item" => %{"id" => 35, "name" => "Alice Aubree"}}]}, data)
     end
   end
 
   test "get a person" do
     use_cassette "persons_get", match_requests_on: [:query] do
-      assert match?({:ok, %{"data" => %{"id" => 23, "name" => "Alice Aubree"}}}, Persons.get(23))
+      assert match?({:ok, %{"data" => %{"id" => 35, "name" => "Alice Aubree"}}}, Persons.get(35))
     end
   end
 end
