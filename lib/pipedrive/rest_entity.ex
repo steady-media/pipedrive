@@ -21,7 +21,7 @@ defmodule Pipedrive.RESTEntity do
   @callback delete_bulk(nonempty_list(String.t())) :: API.response()
   @callback delete_bulk(nonempty_list(String.t()), Keyword.t()) :: API.response()
 
-  @callback search(map()) :: API.response()
+  @callback search(Keyword.t()) :: API.response()
 
   @optional_callbacks search: 1, get: 1, get: 2
 end
