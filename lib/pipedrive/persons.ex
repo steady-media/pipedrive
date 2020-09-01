@@ -9,7 +9,7 @@ defmodule Pipedrive.Persons do
   import Pipedrive, only: [api_docs_base_url: 0]
 
   @doc """
-  Get all deals.
+  Get all persons.
 
   [Pipedrive API docs](#{api_docs_base_url()}/Persons/get_persons)
   """
@@ -17,6 +17,17 @@ defmodule Pipedrive.Persons do
   @spec list(Keyword.t()) :: API.response()
   def list(opts \\ []) do
     API.get("/persons", "", opts)
+  end
+
+  @doc """
+  Get person by ID.
+
+  [Pipedrive API docs](#{api_docs_base_url()}/Persons/get_persons_id)
+  """
+  @impl Pipedrive.RESTEntity
+  @spec get(String.t(), Keyword.t()) :: API.response()
+  def get(id, opts \\ []) do
+    API.get("/persons/#{id}", "", opts)
   end
 
   @doc """
@@ -65,5 +76,16 @@ defmodule Pipedrive.Persons do
   @spec delete_bulk(nonempty_list(String.t()), Keyword.t()) :: API.response()
   def delete_bulk(ids, opts \\ []) do
     API.delete("/persons", %{ids: serialize_ids(ids)}, opts)
+  end
+
+  @doc """
+  Search a person
+
+  [Pipedrive API docs](#{api_docs_base_url()}/Persons/get_persons_search)
+  """
+  @impl Pipedrive.RESTEntity
+  @spec search(Keyword.t()) :: API.response()
+  def search(opts \\ []) do
+    API.get("/persons/search", "", opts)
   end
 end

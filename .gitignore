@@ -27,3 +27,5 @@ pipedrive-*.tar
 /priv/plts/*.plt.hash
 
 SCRATCHPAD.ex
+
+.vscode/
