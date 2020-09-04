@@ -1,0 +1,49 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": {
+        "follow_redirect": "true"
+      },
+      "request_body": "",
+      "url": "https://company-subdomain.pipedrive.com/v1/persons/35?api_token=[API_TOKEN_REMOVED]"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"success\":true,\"data\":{\"id\":35,\"company_id\":6862868,\"owner_id\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"has_pic\":1,\"pic_hash\":\"a22e1716123b7c5be851973bd362a2f3\",\"active_flag\":true,\"value\":8091815},\"org_id\":null,\"name\":\"Alice Aubree\",\"first_name\":\"Alice\",\"last_name\":\"Aubree\",\"open_deals_count\":4,\"related_open_deals_count\":0,\"closed_deals_count\":0,\"related_closed_deals_count\":0,\"participant_open_deals_count\":0,\"participant_closed_deals_count\":0,\"email_messages_count\":0,\"activities_count\":0,\"done_activities_count\":0,\"undone_activities_count\":0,\"files_count\":0,\"notes_count\":0,\"followers_count\":1,\"won_deals_count\":0,\"related_won_deals_count\":0,\"lost_deals_count\":0,\"related_lost_deals_count\":0,\"active_flag\":true,\"phone\":[{\"value\":\"\",\"primary\":true}],\"email\":[{\"label\":\"\",\"value\":\"alice@example.com\",\"primary\":true}],\"first_char\":\"a\",\"update_time\":\"2020-09-01 12:48:58\",\"add_time\":\"2020-05-21 09:43:13\",\"visible_to\":\"3\",\"picture_id\":null,\"next_activity_date\":null,\"next_activity_time\":null,\"next_activity_id\":null,\"last_activity_id\":null,\"last_activity_date\":null,\"last_incoming_mail_time\":null,\"last_outgoing_mail_time\":null,\"label\":null,\"d8a94a581ae3f15581b9905ffe3d802a60b27f9a\":\"Steady Automatic Export (dev Mihai)\",\"7777af00cf4c419c0f038f75cfb0fa4380f853fe\":\"96e0749b-b370-46b2-9d26-37ca19a26bd9\",\"8b6c01c11c35a95490d81bc665a929ff730c734a\":\"https:\\/\\/localhost:4000\\/alices-podcast\",\"9360c1ee969747bc9f33762669ccf8f1325490ff\":\"fr\",\"df03d1a618f9b0be1880436102586656617640f8\":null,\"9d8325277a2d56ea352d6f1b7366f054a2fb3abf\":null,\"org_name\":null,\"cc_email\":\"[EMAIL_REMOVED]\",\"owner_name\":\"Mihai Tarnovan\"},\"additional_data\":{\"dropbox_email\":\"[EMAIL_REMOVED]\"},\"related_objects\":{\"user\":{\"8091815\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"has_pic\":1,\"pic_hash\":\"a22e1716123b7c5be851973bd362a2f3\",\"active_flag\":true}}}}",
+      "headers": {
+        "Date": "Tue, 01 Sep 2020 12:51:57 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Set-Cookie": "__cfduid=dd88f0bce1624ac3a1f097fc75031a6801598964717; expires=Thu, 01-Oct-20 12:51:57 GMT; path=/; domain=.pipedrive.com; HttpOnly; SameSite=Lax",
+        "CF-Ray": "5cbf202a790facbe-OTP",
+        "Access-Control-Allow-Origin": "*",
+        "Cache-Control": "no-cache",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "CF-Cache-Status": "DYNAMIC",
+        "Access-Control-Expose-Headers": "X-RateLimit-Remaining, X-RateLimit-Limit, X-RateLimit-Reset",
+        "badi": "Routing: eu-central-1=>eu-central-1; Version: c88a; Host: bari;",
+        "cf-request-id": "04eb526e8b0000acbebc337200000001",
+        "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+        "pdtrusted-wgw-real-user-ip": "5.15.246.253",
+        "x-content-type-options": "nosniff",
+        "x-correlation-id": "4cc4e749-e463-4eab-9718-643bc001f820",
+        "x-frame-options": "SAMEORIGIN",
+        "X-RateLimit-Limit": "20",
+        "X-RateLimit-Remaining": "19",
+        "X-RateLimit-Reset": "2",
+        "X-XSS-Protection": "1; mode=block",
+        "Server": "cloudflare",
+        "alt-svc": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

@@ -63,4 +63,25 @@ defmodule Pipedrive.Test.Persons do
       refute Enum.find(data, &(&1["id"] == id3))
     end
   end
+
+  test "search a person" do
+    use_cassette "persons_search", match_requests_on: [:query] do
+      {:ok, %{"data" => data}} =
+        Persons.search(
+          url_params: %{
+            term: "96e0749b-b370-46b2-9d26-37ca19a26bd9",
+            exact_match: true,
+            fields: :custom_fields
+          }
+        )
+
+      assert match?(%{"items" => [%{"item" => %{"id" => 35, "name" => "Alice Aubree"}}]}, data)
+    end
+  end
+
+  test "get a person" do
+    use_cassette "persons_get", match_requests_on: [:query] do
+      assert match?({:ok, %{"data" => %{"id" => 35, "name" => "Alice Aubree"}}}, Persons.get(35))
+    end
+  end
 end
