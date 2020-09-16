@@ -1,0 +1,49 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": {
+        "follow_redirect": "true"
+      },
+      "request_body": "",
+      "url": "https://company-subdomain.pipedrive.com/v1/deals/188?api_token=[API_TOKEN_REMOVED]"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"success\":true,\"data\":{\"id\":188,\"creator_user_id\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"has_pic\":1,\"pic_hash\":\"a22e1716123b7c5be851973bd362a2f3\",\"active_flag\":true,\"value\":8091815},\"user_id\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"has_pic\":1,\"pic_hash\":\"a22e1716123b7c5be851973bd362a2f3\",\"active_flag\":true,\"value\":8091815},\"person_id\":{\"active_flag\":true,\"name\":\"Mihai T\",\"email\":[{\"label\":\"\",\"value\":\"mihai+pipedrivetest2@steadyhq.com\",\"primary\":true}],\"phone\":[{\"value\":\"\",\"primary\":true}],\"value\":56},\"org_id\":{\"name\":\"pdtest2\",\"people_count\":0,\"owner_id\":8091815,\"address\":null,\"active_flag\":true,\"cc_email\":\"[EMAIL_REMOVED]\",\"value\":186},\"stage_id\":9,\"title\":\"pdtest2 deal\",\"value\":0,\"currency\":\"USD\",\"add_time\":\"2020-09-11 07:43:10\",\"update_time\":\"2020-09-11 07:43:11\",\"stage_change_time\":null,\"active\":true,\"deleted\":false,\"status\":\"open\",\"probability\":null,\"next_activity_date\":null,\"next_activity_time\":null,\"next_activity_id\":null,\"last_activity_id\":null,\"last_activity_date\":null,\"lost_reason\":null,\"visible_to\":\"3\",\"close_time\":null,\"pipeline_id\":2,\"won_time\":null,\"first_won_time\":null,\"lost_time\":null,\"products_count\":0,\"files_count\":0,\"notes_count\":0,\"followers_count\":1,\"email_messages_count\":0,\"activities_count\":0,\"done_activities_count\":0,\"undone_activities_count\":0,\"participants_count\":1,\"expected_close_date\":null,\"last_incoming_mail_time\":null,\"last_outgoing_mail_time\":null,\"label\":null,\"8aabf921a74c104a43f2b04743f6a4c1b0dc4482\":\"Steady Automatic Export (dev Mihai)\",\"8047a6b46eb97c4cc9393d8be1fe2ab2041489ad\":null,\"8047a6b46eb97c4cc9393d8be1fe2ab2041489ad_currency\":null,\"a5009b0b3fce450c58116d053134cd5555187562\":\"b1ec4305-d3c0-4b6a-a76b-c7ade987de8d\",\"4c7892bfdfd24c2b476616a696f2cdc67ea9eefc\":null,\"4ba18d6cdd04fcbb587d9b3cf7793d139a14c588\":null,\"4ba18d6cdd04fcbb587d9b3cf7793d139a14c588_timezone_id\":null,\"5c5d9bc4cb0c8ff84015324afbe74bb037ce92cd\":null,\"2a2ffdf26fa8530cd22941d6eb694568dff1d5eb\":null,\"stage_order_nr\":3,\"person_name\":\"Mihai T\",\"org_name\":\"pdtest2\",\"next_activity_subject\":null,\"next_activity_type\":null,\"next_activity_duration\":null,\"next_activity_note\":null,\"formatted_value\":\"$0\",\"weighted_value\":0,\"formatted_weighted_value\":\"$0\",\"weighted_value_currency\":\"USD\",\"rotten_time\":null,\"owner_name\":\"Mihai Tarnovan\",\"cc_email\":\"[EMAIL_REMOVED]\",\"org_hidden\":false,\"person_hidden\":false,\"average_time_to_won\":{\"y\":0,\"m\":0,\"d\":0,\"h\":0,\"i\":0,\"s\":0,\"total_seconds\":0},\"average_stage_progress\":0,\"age\":{\"y\":0,\"m\":0,\"d\":5,\"h\":4,\"i\":14,\"s\":52,\"total_seconds\":447292},\"stay_in_pipeline_stages\":{\"times_in_stages\":{\"7\":0,\"8\":0,\"9\":447292},\"order_of_stages\":[7,8,9]},\"last_activity\":null,\"next_activity\":null},\"additional_data\":{\"dropbox_email\":\"[EMAIL_REMOVED]\"},\"related_objects\":{\"user\":{\"8091815\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"has_pic\":1,\"pic_hash\":\"a22e1716123b7c5be851973bd362a2f3\",\"active_flag\":true}},\"organization\":{\"186\":{\"id\":186,\"name\":\"pdtest2\",\"people_count\":0,\"owner_id\":8091815,\"address\":null,\"active_flag\":true,\"cc_email\":\"[EMAIL_REMOVED]\"}},\"person\":{\"56\":{\"active_flag\":true,\"id\":56,\"name\":\"Mihai T\",\"email\":[{\"label\":\"\",\"value\":\"mihai+pipedrivetest2@steadyhq.com\",\"primary\":true}],\"phone\":[{\"value\":\"\",\"primary\":true}]}}}}",
+      "headers": {
+        "Date": "Wed, 16 Sep 2020 11:58:02 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Set-Cookie": "__cfduid=d812f44ca01725ef5565f07f09c9595521600257482; expires=Fri, 16-Oct-20 11:58:02 GMT; path=/; domain=.pipedrive.com; HttpOnly; SameSite=Lax",
+        "CF-Ray": "5d3a69d1dfa4aca6-OTP",
+        "Access-Control-Allow-Origin": "*",
+        "Cache-Control": "no-cache",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "CF-Cache-Status": "DYNAMIC",
+        "Access-Control-Expose-Headers": "X-RateLimit-Remaining, X-RateLimit-Limit, X-RateLimit-Reset",
+        "badi": "Routing: eu-central-1=>eu-central-1; Version: 9821; Host: bari;",
+        "cf-request-id": "05386077220000aca62b346200000001",
+        "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+        "pdtrusted-wgw-real-user-ip": "5.15.227.115",
+        "x-content-type-options": "nosniff",
+        "x-correlation-id": "b9e1db1f-61ca-4f41-9cde-b788c781f2fe",
+        "x-frame-options": "SAMEORIGIN",
+        "X-RateLimit-Limit": "20",
+        "X-RateLimit-Remaining": "19",
+        "X-RateLimit-Reset": "2",
+        "X-XSS-Protection": "1; mode=block",
+        "Server": "cloudflare",
+        "alt-svc": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

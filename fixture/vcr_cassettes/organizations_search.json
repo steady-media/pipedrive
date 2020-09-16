@@ -1,0 +1,47 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": {
+        "follow_redirect": "true"
+      },
+      "request_body": "",
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations/search?api_token=[API_TOKEN_REMOVED]&exact_match=true&fields=custom_fields&term=b1ec4305-d3c0-4b6a-a76b-c7ade987de8d"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"success\":true,\"data\":{\"items\":[{\"result_score\":0.2089,\"item\":{\"id\":186,\"type\":\"organization\",\"name\":\"pdtest2\",\"address\":null,\"visible_to\":3,\"owner\":{\"id\":8091815},\"custom_fields\":[\"Steady Automatic Export (dev Mihai)\",\"b1ec4305-d3c0-4b6a-a76b-c7ade987de8d\"],\"notes\":[]}}]},\"additional_data\":{\"pagination\":{\"start\":0,\"limit\":100,\"more_items_in_collection\":false}}}",
+      "headers": {
+        "Date": "Wed, 16 Sep 2020 11:50:56 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "365",
+        "Connection": "keep-alive",
+        "Set-Cookie": "__cfduid=d63ca5e66f54ef64f96aa530663f76d2d1600257055; expires=Fri, 16-Oct-20 11:50:55 GMT; path=/; domain=.pipedrive.com; HttpOnly; SameSite=Lax",
+        "CF-Ray": "5d3a5f67ae88fd11-OTP",
+        "Access-Control-Allow-Origin": "*",
+        "Cache-Control": "no-cache",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "CF-Cache-Status": "DYNAMIC",
+        "Access-Control-Expose-Headers": "X-RateLimit-Remaining, X-RateLimit-Limit, X-RateLimit-Reset",
+        "badi": "Routing: eu-central-1=>eu-central-1; Version: 9821; Host: bari;",
+        "cf-request-id": "053859f4c40000fd11e687c200000001",
+        "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+        "pdtrusted-wgw-real-user-ip": "5.15.227.115",
+        "X-Content-Type-Options": "nosniff",
+        "x-correlation-id": "2a9c7d34-90bb-445a-bb1e-123dafec3092",
+        "X-RateLimit-Limit": "20",
+        "X-RateLimit-Remaining": "19",
+        "X-RateLimit-Reset": "2",
+        "X-XSS-Protection": "1; mode=block",
+        "Server": "cloudflare",
+        "alt-svc": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

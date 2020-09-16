@@ -1,0 +1,49 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": {
+        "follow_redirect": "true"
+      },
+      "request_body": "",
+      "url": "https://company-subdomain.pipedrive.com/v1/organizations/186?api_token=[API_TOKEN_REMOVED]"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"success\":true,\"data\":{\"id\":186,\"company_id\":6862868,\"owner_id\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"has_pic\":1,\"pic_hash\":\"a22e1716123b7c5be851973bd362a2f3\",\"active_flag\":true,\"value\":8091815},\"name\":\"pdtest2\",\"open_deals_count\":1,\"related_open_deals_count\":0,\"closed_deals_count\":0,\"related_closed_deals_count\":0,\"email_messages_count\":0,\"people_count\":0,\"activities_count\":0,\"done_activities_count\":0,\"undone_activities_count\":0,\"files_count\":0,\"notes_count\":0,\"followers_count\":1,\"won_deals_count\":0,\"related_won_deals_count\":0,\"lost_deals_count\":0,\"related_lost_deals_count\":0,\"active_flag\":true,\"category_id\":null,\"picture_id\":null,\"country_code\":null,\"first_char\":\"p\",\"update_time\":\"2020-09-11 07:43:10\",\"add_time\":\"2020-09-11 07:43:10\",\"visible_to\":\"3\",\"next_activity_date\":null,\"next_activity_time\":null,\"next_activity_id\":null,\"last_activity_id\":null,\"last_activity_date\":null,\"label\":null,\"address\":null,\"address_subpremise\":null,\"address_street_number\":null,\"address_route\":null,\"address_sublocality\":null,\"address_locality\":null,\"address_admin_area_level_1\":null,\"address_admin_area_level_2\":null,\"address_country\":null,\"address_postal_code\":null,\"address_formatted_address\":null,\"8856eddfc870ea306f83b9b5789500dc01da007d\":\"Steady Automatic Export (dev Mihai)\",\"2a7c6cceba517524cac241553b01fddceda8ae5b\":null,\"2a7c6cceba517524cac241553b01fddceda8ae5b_currency\":null,\"4db06b1975c7c8049f7861c96d04155f81f09b1c\":\"b1ec4305-d3c0-4b6a-a76b-c7ade987de8d\",\"522b2b8b4f9a11200beb5b92d9d22afd8ff02bbb\":null,\"dc8ffc5074a4179567c23a28865be0c8bce530bc\":null,\"dc8ffc5074a4179567c23a28865be0c8bce530bc_timezone_id\":null,\"cc_email\":\"[EMAIL_REMOVED]\",\"owner_name\":\"Mihai Tarnovan\",\"edit_name\":true,\"last_activity\":null,\"next_activity\":null},\"additional_data\":{\"followers\":{\"8091815\":{\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"user_id\":8091815,\"pic_hash\":\"a22e1716123b7c5be851973bd362a2f3\",\"id\":187}},\"dropbox_email\":\"[EMAIL_REMOVED]\"},\"related_objects\":{\"user\":{\"8091815\":{\"id\":8091815,\"name\":\"Mihai Tarnovan\",\"email\":\"[EMAIL_REMOVED]\",\"has_pic\":1,\"pic_hash\":\"a22e1716123b7c5be851973bd362a2f3\",\"active_flag\":true}}}}",
+      "headers": {
+        "Date": "Wed, 16 Sep 2020 11:53:10 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Set-Cookie": "__cfduid=d1cd48a9f579b4805baf346f848d024681600257190; expires=Fri, 16-Oct-20 11:53:10 GMT; path=/; domain=.pipedrive.com; HttpOnly; SameSite=Lax",
+        "CF-Ray": "5d3a62ae7b2f2930-OTP",
+        "Access-Control-Allow-Origin": "*",
+        "Cache-Control": "no-cache",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "CF-Cache-Status": "DYNAMIC",
+        "Access-Control-Expose-Headers": "X-RateLimit-Remaining, X-RateLimit-Limit, X-RateLimit-Reset",
+        "badi": "Routing: eu-central-1=>eu-central-1; Version: 9821; Host: bari;",
+        "cf-request-id": "05385c010c00002930f79bf200000001",
+        "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+        "pdtrusted-wgw-real-user-ip": "5.15.227.115",
+        "x-content-type-options": "nosniff",
+        "x-correlation-id": "90cc669c-c32c-409c-87b8-cbfd8d0aee49",
+        "x-frame-options": "SAMEORIGIN",
+        "X-RateLimit-Limit": "20",
+        "X-RateLimit-Remaining": "19",
+        "X-RateLimit-Reset": "2",
+        "X-XSS-Protection": "1; mode=block",
+        "Server": "cloudflare",
+        "alt-svc": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

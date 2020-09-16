@@ -1,4 +1,4 @@
-defmodule Pipedrive.Test.API do
+defmodule Pipedrive.Test.Organizations do
   use ExUnit.Case
   use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
   require Logger
@@ -47,6 +47,27 @@ defmodule Pipedrive.Test.API do
       refute Enum.find(data || %{}, fn org ->
                org["id"] in [id1, id2]
              end)
+    end
+  end
+
+  test "search an organization" do
+    use_cassette "organizations_search", match_requests_on: [:query] do
+      {:ok, %{"data" => data}} =
+        Organizations.search(
+          url_params: %{
+            term: "b1ec4305-d3c0-4b6a-a76b-c7ade987de8d",
+            exact_match: true,
+            fields: :custom_fields
+          }
+        )
+
+      assert match?(%{"items" => [%{"item" => %{"id" => 186, "name" => "pdtest2"}}]}, data)
+    end
+  end
+
+  test "get an organization" do
+    use_cassette "organizations_get", match_requests_on: [:query] do
+      assert match?({:ok, %{"data" => %{"id" => 186, "name" => "pdtest2"}}}, Organizations.get(186))
     end
   end
 end

@@ -20,6 +20,17 @@ defmodule Pipedrive.Organizations do
   end
 
   @doc """
+  Get an organization by ID.
+
+  [Pipedrive API docs](#{api_docs_base_url()}/Organizations/get_organizations_id)
+  """
+  @impl Pipedrive.RESTEntity
+  @spec get(String.t(), Keyword.t()) :: API.response()
+  def get(id, opts \\ []) do
+    API.get("/organizations/#{id}", "", opts)
+  end
+
+  @doc """
   Create an organization. Accepts a map of params (`body`) of which `name` is required.
 
   [Pipedrive API docs](#{api_docs_base_url()}/Organizations/post_organizations)
@@ -65,5 +76,16 @@ defmodule Pipedrive.Organizations do
   @spec delete_bulk(nonempty_list(String.t()), Keyword.t()) :: API.response()
   def delete_bulk(ids, opts \\ []) do
     API.delete("/organizations", %{ids: serialize_ids(ids)}, opts)
+  end
+
+  @doc """
+  Search an organization
+
+  [Pipedrive API docs](#{api_docs_base_url()}/Organizations/get_organizations_search)
+  """
+  @impl Pipedrive.RESTEntity
+  @spec search(Keyword.t()) :: API.response()
+  def search(opts \\ []) do
+    API.get("/organizations/search", "", opts)
   end
 end

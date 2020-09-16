@@ -1,0 +1,47 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": {
+        "follow_redirect": "true"
+      },
+      "request_body": "",
+      "url": "https://company-subdomain.pipedrive.com/v1/deals/search?api_token=[API_TOKEN_REMOVED]&exact_match=true&fields=custom_fields&term=b1ec4305-d3c0-4b6a-a76b-c7ade987de8d"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"success\":true,\"data\":{\"items\":[{\"result_score\":0.5844,\"item\":{\"id\":188,\"type\":\"deal\",\"title\":\"pdtest2 deal\",\"value\":null,\"currency\":\"USD\",\"status\":\"open\",\"visible_to\":3,\"owner\":{\"id\":8091815},\"stage\":{\"id\":9,\"name\":\"Demo Scheduled\"},\"person\":{\"id\":56,\"name\":\"Mihai T\"},\"organization\":{\"id\":186,\"name\":\"pdtest2\",\"address\":null},\"custom_fields\":[\"Steady Automatic Export (dev Mihai)\",\"b1ec4305-d3c0-4b6a-a76b-c7ade987de8d\"],\"notes\":[]}}]},\"additional_data\":{\"pagination\":{\"start\":0,\"limit\":100,\"more_items_in_collection\":false}}}",
+      "headers": {
+        "Date": "Wed, 16 Sep 2020 11:58:03 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "529",
+        "Connection": "keep-alive",
+        "Set-Cookie": "__cfduid=d551b67732e3d81e5c9f5c954ff72f4711600257483; expires=Fri, 16-Oct-20 11:58:03 GMT; path=/; domain=.pipedrive.com; HttpOnly; SameSite=Lax",
+        "CF-Ray": "5d3a69d7af8aaca6-OTP",
+        "Access-Control-Allow-Origin": "*",
+        "Cache-Control": "no-cache",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "CF-Cache-Status": "DYNAMIC",
+        "Access-Control-Expose-Headers": "X-RateLimit-Remaining, X-RateLimit-Limit, X-RateLimit-Reset",
+        "badi": "Routing: eu-central-1=>eu-central-1; Version: 9821; Host: bari;",
+        "cf-request-id": "0538607acd0000aca62b012200000001",
+        "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+        "pdtrusted-wgw-real-user-ip": "5.15.227.115",
+        "X-Content-Type-Options": "nosniff",
+        "x-correlation-id": "1f6be7a1-f310-45ac-bcc4-8ccb96795d5e",
+        "X-RateLimit-Limit": "20",
+        "X-RateLimit-Remaining": "18",
+        "X-RateLimit-Reset": "2",
+        "X-XSS-Protection": "1; mode=block",
+        "Server": "cloudflare",
+        "alt-svc": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
