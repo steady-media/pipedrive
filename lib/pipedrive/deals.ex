@@ -20,6 +20,17 @@ defmodule Pipedrive.Deals do
   end
 
   @doc """
+  Get a deal by ID.
+
+  [Pipedrive API docs](#{api_docs_base_url()}/Deals/get_deals_id)
+  """
+  @impl Pipedrive.RESTEntity
+  @spec get(String.t(), Keyword.t()) :: API.response()
+  def get(id, opts \\ []) do
+    API.get("/deals/#{id}", "", opts)
+  end
+
+  @doc """
   Create a deal. Accepts a map of params (`body`), of which `title` is required.
 
   [Pipedrive API docs](#{api_docs_base_url()}/Deals/post_deals)
@@ -65,5 +76,16 @@ defmodule Pipedrive.Deals do
   @spec delete_bulk(nonempty_list(String.t()), Keyword.t()) :: API.response()
   def delete_bulk(ids, opts \\ []) do
     API.delete("/deals", %{ids: serialize_ids(ids)}, opts)
+  end
+
+  @doc """
+  Search an deal
+
+  [Pipedrive API docs](#{api_docs_base_url()}/Deals/get_deals_search)
+  """
+  @impl Pipedrive.RESTEntity
+  @spec search(Keyword.t()) :: API.response()
+  def search(opts \\ []) do
+    API.get("/deals/search", "", opts)
   end
 end
