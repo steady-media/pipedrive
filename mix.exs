@@ -52,7 +52,7 @@ defmodule Pipedrive.MixProject do
       {:ex_doc, "~> 0.19", only: :dev, runtime: false},
       {:excoveralls, "~> 0.10", only: :test},
       {:credo, "~> 1.5.0", only: [:dev, :test], runtime: false},
-      {:dialyxir, "~> 1.0.0-rc.4", only: [:dev], runtime: false}
+      {:dialyxir, "~> 1.1.0", only: [:dev], runtime: false}
     ]
   end
 
