@@ -28,7 +28,7 @@ jobs:
       PIPEDRIVE_COMPANY_SUBDOMAIN: company-subdomain
       PIPEDRIVE_API_TOKEN: invalid-token
     docker:
-      - image: circleci/elixir:1.12.1
+      - image: circleci/elixir:1.12.2
 
     working_directory: ~/repo
     steps:
