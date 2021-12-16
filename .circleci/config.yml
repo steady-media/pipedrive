@@ -28,7 +28,7 @@ jobs:
       PIPEDRIVE_COMPANY_SUBDOMAIN: company-subdomain
       PIPEDRIVE_API_TOKEN: invalid-token
     docker:
-      - image: cimg/elixir:1.13.0
+      - image: cimg/elixir:1.13.1
 
     working_directory: ~/repo
     steps:
