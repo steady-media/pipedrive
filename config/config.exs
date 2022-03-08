@@ -31,5 +31,5 @@ import_config "#{Mix.env()}.exs"
 
 # You need to set these if you want to re-record ExVCR cassettes
 config :pipedrive,
-  company_subdomain: System.get_env("PIPEDRIVE_COMPANY_SUBDOMAIN"),
-  api_token: System.get_env("PIPEDRIVE_API_TOKEN")
+  company_subdomain: System.fetch_env!("PIPEDRIVE_COMPANY_SUBDOMAIN"),
+  api_token: System.fetch_env!("PIPEDRIVE_API_TOKEN")
