@@ -1,6 +1,6 @@
 # This file is responsible for configuring your application
 # and its dependencies with the aid of the Mix.Config module.
-use Mix.Config
+import Config
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
@@ -31,5 +31,5 @@ import_config "#{Mix.env()}.exs"
 
 # You need to set these if you want to re-record ExVCR cassettes
 config :pipedrive,
-  company_subdomain: System.get_env("PIPEDRIVE_COMPANY_SUBDOMAIN"),
-  api_token: System.get_env("PIPEDRIVE_API_TOKEN")
+  company_subdomain: System.fetch_env!("PIPEDRIVE_COMPANY_SUBDOMAIN"),
+  api_token: System.fetch_env!("PIPEDRIVE_API_TOKEN")
